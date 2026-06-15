@@ -28,13 +28,9 @@ export function Footer() {
 
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.5fr_1fr_1fr] lg:px-8">
         <div>
-          <img
-            src={logo.url}
-            alt="شعار الرواد"
-            className="h-16 w-auto brightness-0 invert"
-            width={140}
-            height={140}
-          />
+          <div className="inline-flex rounded-2xl bg-background p-2.5 shadow-soft">
+            <img src={logo.url} alt="شعار الرواد" className="h-14 w-auto" width={140} height={140} />
+          </div>
           <p className="mt-4 max-w-sm leading-relaxed text-primary-foreground/70">
             نصنع روّاد المستقبل. مؤسسة تعليمية حديثة تجمع بين التميز الأكاديمي وتنمية المهارات
             والاستعداد لمتطلبات المستقبل.
