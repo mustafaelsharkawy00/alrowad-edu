@@ -247,8 +247,9 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-secondary/50 py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden surface-soft py-20 sm:py-28">
+        <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-60" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="آراء الطلاب"
             title="قصص نجاح تلهمنا"
