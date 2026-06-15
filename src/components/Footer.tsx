@@ -8,9 +8,12 @@ import { DOMAIN, WHATSAPP_CHANNEL, WHATSAPP_LINK, WHATSAPP_NUMBER } from "@/lib/
 
 export function Footer() {
   return (
-    <footer className="gradient-navy text-primary-foreground">
+    <footer className="relative overflow-hidden gradient-navy text-primary-foreground">
+      <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-30" />
+      <GatewayArch className="pointer-events-none absolute -bottom-10 left-1/2 h-72 w-auto -translate-x-1/2 text-primary-foreground/[0.06]" />
+
       {/* Community join band */}
-      <div className="border-b border-primary-foreground/10">
+      <div className="relative border-b border-primary-foreground/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-12 text-center sm:px-6 lg:flex-row lg:justify-between lg:text-right lg:px-8">
           <div className="max-w-xl">
             <h2 className="text-2xl font-extrabold sm:text-3xl">انضم إلى مجتمع الرواد</h2>
@@ -27,11 +30,15 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.5fr_1fr_1fr] lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.5fr_1fr_1fr] lg:px-8">
         <div>
-          <div className="inline-flex rounded-2xl bg-background p-2.5 shadow-soft">
-            <img src={logo.url} alt="شعار الرواد" className="h-14 w-auto" width={140} height={140} />
-          </div>
+          <img
+            src={logoLight.url}
+            alt="شعار الرواد"
+            className="h-20 w-auto"
+            width={180}
+            height={180}
+          />
           <p className="mt-4 max-w-sm leading-relaxed text-primary-foreground/70">
             نصنع روّاد المستقبل. مؤسسة تعليمية حديثة تجمع بين التميز الأكاديمي وتنمية المهارات
             والاستعداد لمتطلبات المستقبل.
