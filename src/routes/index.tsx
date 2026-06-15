@@ -1,29 +1,306 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowLeft,
+  MessageCircle,
+  Eye,
+  UserCheck,
+  Sparkles,
+  Lightbulb,
+  Rocket,
+  LayoutGrid,
+  Quote,
+  Star,
+} from "lucide-react";
+import heroImage from "@/assets/hero-gateway.jpg";
+import logo from "@/assets/alrowad-logo.png.asset.json";
+import { Button } from "@/components/ui/button";
+import { SectionHeading } from "@/components/SectionHeading";
+import { ProgramCard } from "@/components/ProgramCard";
+import { programCategories, WHATSAPP_LINK } from "@/lib/site-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "الرواد | انطلق نحو مستقبل أفضل" },
+      {
+        name: "description",
+        content:
+          "أكاديمية الرواد — برامج تعليمية متكاملة في المواد الدراسية واللغات والمواد الجامعية والكورسات التقنية والإبداعية مع متابعة مستمرة وبيئة احترافية.",
+      },
+      { property: "og:title", content: "الرواد | انطلق نحو مستقبل أفضل" },
+      {
+        property: "og:description",
+        content: "تعليم اليوم يصنع مستقبل الغد. اكتشف برامج أكاديمية الرواد.",
+      },
     ],
   }),
-  component: Index,
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+const whyCards = [
+  { icon: Eye, title: "متابعة مستمرة", text: "تقارير دورية ومتابعة فردية لكل طالب لضمان التقدم المستمر." },
+  { icon: UserCheck, title: "مدرسون متخصصون", text: "نخبة من المعلمين الخبراء في مجالاتهم وأساليب التدريس الحديثة." },
+  { icon: Sparkles, title: "تعليم حديث", text: "مناهج وأدوات تعليمية متطورة تواكب أحدث المعايير العالمية." },
+  { icon: Lightbulb, title: "بيئة محفزة", text: "بيئة تعليمية ملهمة تشجع على التفكير والإبداع والمشاركة." },
+  { icon: Rocket, title: "مهارات المستقبل", text: "إعداد الطلاب لمتطلبات سوق العمل ومهارات القرن الحادي والعشرين." },
+  { icon: LayoutGrid, title: "تنوع البرامج", text: "برامج شاملة تغطي المواد الدراسية واللغات والتقنية والإبداع." },
+];
+
+const aboutParagraphs = [
+  "أكاديمية الرواد مؤسسة تعليمية حديثة تهدف إلى تقديم تجربة تعليمية متكاملة تجمع بين التميز الأكاديمي، وتنمية المهارات، والاستعداد لمتطلبات المستقبل.",
+  "نؤمن أن التعليم لا يقتصر على تحصيل الدرجات فقط، بل يشمل بناء الشخصية، وتنمية التفكير، واكتساب المهارات التي تمكّن الطلاب من النجاح في الدراسة والحياة العملية.",
+  "تقدم أكاديمية الرواد برامج تعليمية متنوعة تشمل المواد الدراسية، واللغات، والمواد الجامعية، والكورسات التقنية والإبداعية، من خلال بيئة تعليمية احترافية تعتمد على المتابعة المستمرة والتطوير الدائم.",
+  "نسعى إلى إعداد جيل قادر على التعلم، والابتكار، والمنافسة بثقة في عالم سريع التغير.",
+];
+
+const stats = [
+  { value: "+7", label: "مجالات تعليمية" },
+  { value: "+40", label: "برنامج ومسار" },
+  { value: "100%", label: "متابعة مستمرة" },
+  { value: "∞", label: "طموح بلا حدود" },
+];
+
+const testimonials = [
+  {
+    name: "ولي أمر — أحمد",
+    role: "المرحلة الثانوية",
+    text: "تحسّن مستوى ابني بشكل ملحوظ خلال أشهر قليلة. المتابعة المستمرة وأسلوب المعلمين صنعا فارقًا حقيقيًا.",
+  },
+  {
+    name: "طالبة — سارة",
+    role: "برنامج اللغات",
+    text: "البيئة التعليمية محفّزة ومنظمة، وتعلمت مهارات لم أكن أتخيل الوصول إليها. تجربة احترافية بكل المقاييس.",
+  },
+  {
+    name: "طالب — يوسف",
+    role: "الكورسات التقنية",
+    text: "تعلمت البرمجة من الصفر حتى بناء مشاريع حقيقية. المحتوى عملي ومواكب لسوق العمل تمامًا.",
+  },
+];
+
+function HomePage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      {/* HERO */}
+      <section className="relative overflow-hidden gradient-navy">
+        <img
+          src={heroImage}
+          alt="بوابة المعرفة نحو المستقبل"
+          width={1920}
+          height={1080}
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/70 to-primary/95" />
+        <div className="absolute inset-0 ring-spot" />
+
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="mx-auto inline-flex rounded-3xl bg-background p-3 shadow-elegant animate-fade">
+              <img
+                src={logo.url}
+                alt="شعار الرواد"
+                width={180}
+                height={180}
+                className="h-24 w-auto sm:h-28"
+              />
+            </div>
+            <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
+              <Star className="h-3.5 w-3.5 fill-gold" />
+              نصنع روّاد المستقبل
+            </span>
+            <h1 className="mt-6 text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl lg:text-6xl animate-rise">
+              انطلق نحو مستقبل أفضل مع الرواد
+            </h1>
+            <p className="mt-5 text-lg font-semibold text-accent sm:text-xl">
+              تعليم اليوم يصنع مستقبل الغد
+            </p>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
+              نوفر برامج تعليمية متكاملة في المواد الدراسية واللغات والمواد الجامعية والكورسات
+              التقنية والإبداعية، مع متابعة مستمرة وبيئة تعليمية احترافية.
+            </p>
+            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
+                <Link to="/contact">
+                  سجل الآن
+                  <ArrowLeft />
+                </Link>
+              </Button>
+              <Button asChild variant="heroOutline" size="xl" className="w-full sm:w-auto">
+                <Link to="/contact">تواصل معنا</Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4">
+            {stats.map((s) => (
+              <div
+                key={s.label}
+                className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-4 py-5 text-center backdrop-blur-sm"
+              >
+                <div className="text-2xl font-extrabold text-gold sm:text-3xl">{s.value}</div>
+                <div className="mt-1 text-xs text-primary-foreground/70 sm:text-sm">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div>
+              <SectionHeading
+                eyebrow="من نحن"
+                title="مؤسسة تعليمية حديثة تصنع الفارق"
+                align="start"
+              />
+              <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+                {aboutParagraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+              <Button asChild className="mt-8" size="lg">
+                <Link to="/programs">
+                  اكتشف برامجنا
+                  <ArrowLeft />
+                </Link>
+              </Button>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-accent/10 to-gold/10 blur-2xl" />
+              <div className="overflow-hidden rounded-[2rem] border border-border shadow-elegant">
+                <img
+                  src={heroImage}
+                  alt="بيئة الرواد التعليمية"
+                  loading="lazy"
+                  width={1200}
+                  height={900}
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 right-6 rounded-2xl border border-border bg-card px-6 py-4 shadow-card">
+                <div className="text-2xl font-extrabold text-primary">رؤية</div>
+                <div className="text-sm text-muted-foreground">إعداد روّاد المستقبل</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY */}
+      <section className="bg-secondary/50 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="لماذا الرواد؟"
+            title="مميزات تجعلنا الخيار الأمثل"
+            description="نجمع بين الخبرة الأكاديمية والأساليب الحديثة لنمنح كل طالب تجربة تعليمية استثنائية."
+          />
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {whyCards.map(({ icon: Icon, title, text }) => (
+              <div
+                key={title}
+                className="group rounded-3xl border border-border bg-card p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
+              >
+                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-secondary text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Icon className="h-7 w-7" />
+                </div>
+                <h3 className="mt-5 text-lg font-extrabold text-primary">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROGRAMS OVERVIEW */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="برامجنا"
+            title="برامج تعليمية تغطي كل مسار"
+            description="من المواد الدراسية واللغات إلى الكورسات التقنية والإبداعية — كل ما يحتاجه الطالب في مكان واحد."
+          />
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {programCategories.map((category) => (
+              <ProgramCard key={category.id} category={category} />
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Button asChild variant="outline" size="lg">
+              <Link to="/programs">
+                عرض كل البرامج
+                <ArrowLeft />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="bg-secondary/50 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="آراء الطلاب"
+            title="قصص نجاح تلهمنا"
+            description="كلمات من طلابنا وأولياء أمورهم تعكس أثر التجربة التعليمية في أكاديمية الرواد."
+          />
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {testimonials.map((t) => (
+              <figure
+                key={t.name}
+                className="flex h-full flex-col rounded-3xl border border-border bg-card p-7 shadow-soft"
+              >
+                <Quote className="h-8 w-8 text-accent/40" />
+                <blockquote className="mt-4 flex-1 text-base leading-relaxed text-foreground/90">
+                  {t.text}
+                </blockquote>
+                <div className="mt-5 flex items-center gap-1 text-gold">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-gold" />
+                  ))}
+                </div>
+                <figcaption className="mt-4 border-t border-border pt-4">
+                  <div className="font-bold text-primary">{t.name}</div>
+                  <div className="text-sm text-muted-foreground">{t.role}</div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-[2.5rem] gradient-navy px-6 py-16 text-center sm:px-12 sm:py-20">
+            <div className="absolute inset-0 ring-spot" />
+            <div className="relative mx-auto max-w-2xl">
+              <h2 className="text-3xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-4xl">
+                ابدأ رحلتك التعليمية معنا اليوم
+              </h2>
+              <p className="mt-4 text-lg text-primary-foreground/75">
+                خطوة واحدة تفصلك عن مستقبل أفضل. انضم إلى أكاديمية الرواد الآن.
+              </p>
+              <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
+                  <Link to="/contact">
+                    سجل الآن
+                    <ArrowLeft />
+                  </Link>
+                </Button>
+                <Button asChild variant="whatsapp" size="xl" className="w-full sm:w-auto">
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle />
+                    تواصل عبر واتساب
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
