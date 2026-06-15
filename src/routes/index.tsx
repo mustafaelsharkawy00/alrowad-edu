@@ -95,13 +95,15 @@ function HomePage() {
 
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
           <div className="mx-auto max-w-3xl text-center">
-            <img
-              src={logo.url}
-              alt="شعار الرواد"
-              width={180}
-              height={180}
-              className="mx-auto h-24 w-auto brightness-0 invert sm:h-28 animate-fade"
-            />
+            <div className="mx-auto inline-flex rounded-3xl bg-background p-3 shadow-elegant animate-fade">
+              <img
+                src={logo.url}
+                alt="شعار الرواد"
+                width={180}
+                height={180}
+                className="h-24 w-auto sm:h-28"
+              />
+            </div>
             <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
               <Star className="h-3.5 w-3.5 fill-gold" />
               نصنع روّاد المستقبل
