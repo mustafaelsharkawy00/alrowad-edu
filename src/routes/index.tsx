@@ -11,11 +11,16 @@ import {
   Quote,
   Star,
 } from "lucide-react";
-import heroImage from "@/assets/hero-gateway.jpg";
-import logo from "@/assets/alrowad-logo.png.asset.json";
+import logoLight from "@/assets/alrowad-logo-light.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
+import {
+  GatewayArch,
+  KnowledgePath,
+  NodeConstellation,
+  GoldDivider,
+} from "@/components/BrandMotifs";
 import { programCategories, WHATSAPP_LINK } from "@/lib/site-data";
 
 export const Route = createFileRoute("/")({
