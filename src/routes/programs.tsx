@@ -3,6 +3,7 @@ import { ArrowLeft, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
+import { GatewayArch } from "@/components/BrandMotifs";
 import { programCategories, WHATSAPP_LINK } from "@/lib/site-data";
 
 export const Route = createFileRoute("/programs")({
