@@ -3,6 +3,7 @@ import { ArrowLeft, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
+import { GatewayArch } from "@/components/BrandMotifs";
 import { programCategories, WHATSAPP_LINK } from "@/lib/site-data";
 
 export const Route = createFileRoute("/programs")({
@@ -28,7 +29,9 @@ function ProgramsPage() {
   return (
     <>
       <section className="relative overflow-hidden gradient-navy">
-        <div className="absolute inset-0 ring-spot" />
+        <div className="pointer-events-none absolute inset-0 hero-mesh opacity-80" />
+        <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-40" />
+        <GatewayArch className="pointer-events-none absolute left-1/2 top-0 h-[150%] w-auto -translate-x-1/2 text-primary-foreground/[0.07]" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
             البرامج التعليمية

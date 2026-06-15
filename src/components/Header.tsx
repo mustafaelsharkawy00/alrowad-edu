@@ -15,10 +15,10 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/70 glass-nav">
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 glass-nav shadow-[0_1px_0_0_color-mix(in_oklab,var(--gold)_22%,transparent)]">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:h-20 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo.url} alt="شعار الرواد" className="h-11 w-auto sm:h-14" width={120} height={120} />
+          <img src={logo.url} alt="شعار الرواد" className="h-12 w-auto sm:h-16" width={120} height={120} />
           <span className="sr-only">الرواد</span>
         </Link>
 

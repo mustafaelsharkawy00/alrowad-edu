@@ -11,11 +11,16 @@ import {
   Quote,
   Star,
 } from "lucide-react";
-import heroImage from "@/assets/hero-gateway.jpg";
-import logo from "@/assets/alrowad-logo.png.asset.json";
+import logoLight from "@/assets/alrowad-logo-light.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
+import {
+  GatewayArch,
+  KnowledgePath,
+  NodeConstellation,
+  GoldDivider,
+} from "@/components/BrandMotifs";
 import { programCategories, WHATSAPP_LINK } from "@/lib/site-data";
 
 export const Route = createFileRoute("/")({
@@ -81,32 +86,29 @@ const testimonials = [
 function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden gradient-navy">
-        <img
-          src={heroImage}
-          alt="بوابة المعرفة نحو المستقبل"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/70 to-primary/95" />
-        <div className="absolute inset-0 ring-spot" />
+      {/* HERO — educational gateway concept */}
+      <section className="relative overflow-hidden gradient-navy text-primary-foreground">
+        {/* Layered brand atmosphere (no stock photo) */}
+        <div className="pointer-events-none absolute inset-0 hero-mesh" />
+        <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-40" />
+        {/* Large gateway arch — the institutional motif from the logo */}
+        <GatewayArch className="pointer-events-none absolute left-1/2 top-6 h-[115%] w-auto -translate-x-1/2 text-primary-foreground/[0.07]" />
+        {/* Winding knowledge path accents */}
+        <KnowledgePath className="pointer-events-none absolute right-4 top-1/2 hidden h-[26rem] w-auto -translate-y-1/2 text-accent/25 lg:block" />
+        <KnowledgePath className="pointer-events-none absolute left-4 top-1/2 hidden h-[26rem] w-auto -translate-y-1/2 scale-x-[-1] text-gold/20 lg:block" />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mx-auto inline-flex rounded-3xl bg-background p-3 shadow-elegant animate-fade">
-              <img
-                src={logo.url}
-                alt="شعار الرواد"
-                width={180}
-                height={180}
-                className="h-24 w-auto sm:h-28"
-              />
-            </div>
-            <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
+            <img
+              src={logoLight.url}
+              alt="شعار الرواد"
+              width={220}
+              height={220}
+              className="mx-auto h-28 w-auto animate-fade drop-shadow-[0_18px_45px_color-mix(in_oklab,var(--accent)_35%,transparent)] sm:h-36"
+            />
+            <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold backdrop-blur-sm">
               <Star className="h-3.5 w-3.5 fill-gold" />
-              نصنع روّاد المستقبل
+              مؤسسة تعليمية حديثة
             </span>
             <h1 className="mt-6 text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl lg:text-6xl animate-rise">
               انطلق نحو مستقبل أفضل مع الرواد
@@ -114,7 +116,8 @@ function HomePage() {
             <p className="mt-5 text-lg font-semibold text-accent sm:text-xl">
               تعليم اليوم يصنع مستقبل الغد
             </p>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
+            <GoldDivider className="mt-6" />
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
               نوفر برامج تعليمية متكاملة في المواد الدراسية واللغات والمواد الجامعية والكورسات
               التقنية والإبداعية، مع متابعة مستمرة وبيئة تعليمية احترافية.
             </p>
@@ -135,8 +138,9 @@ function HomePage() {
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-4 py-5 text-center backdrop-blur-sm"
+                className="relative overflow-hidden rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-4 py-5 text-center backdrop-blur-sm transition-colors hover:border-gold/30"
               >
+                <span className="absolute inset-x-6 top-0 h-px bg-gradient-to-l from-transparent via-gold/60 to-transparent" />
                 <div className="text-2xl font-extrabold text-gold sm:text-3xl">{s.value}</div>
                 <div className="mt-1 text-xs text-primary-foreground/70 sm:text-sm">{s.label}</div>
               </div>
@@ -144,6 +148,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* ABOUT */}
       <section className="py-20 sm:py-28">
@@ -169,18 +174,20 @@ function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-accent/10 to-gold/10 blur-2xl" />
-              <div className="overflow-hidden rounded-[2rem] border border-border shadow-elegant">
-                <img
-                  src={heroImage}
-                  alt="بيئة الرواد التعليمية"
-                  loading="lazy"
-                  width={1200}
-                  height={900}
-                  className="aspect-[4/3] w-full object-cover"
-                />
+              <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-accent/10 to-gold/10 blur-2xl" />
+              {/* Branded gateway panel — institutional, no stock photo */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2.5rem] gradient-navy shadow-elegant">
+                <div className="absolute inset-0 dot-grid-light opacity-30" />
+                <div className="absolute inset-0 hero-mesh opacity-70" />
+                <GatewayArch className="absolute left-1/2 top-6 h-[105%] w-auto -translate-x-1/2 text-primary-foreground/15" />
+                <KnowledgePath className="absolute left-1/2 top-8 h-[78%] w-auto -translate-x-1/2 text-accent/70 float-soft" />
+                <NodeConstellation className="absolute bottom-6 left-6 h-16 w-auto text-gold/40" />
+                <div className="absolute bottom-7 right-7 text-right">
+                  <div className="text-sm font-semibold text-gold">بوابة المعرفة</div>
+                  <div className="text-xs text-primary-foreground/70">رحلة تعلّم متصاعدة</div>
+                </div>
               </div>
-              <div className="absolute -bottom-6 right-6 rounded-2xl border border-border bg-card px-6 py-4 shadow-card">
+              <div className="absolute -bottom-6 right-6 rounded-2xl border border-border bg-card px-6 py-4 shadow-float">
                 <div className="text-2xl font-extrabold text-primary">رؤية</div>
                 <div className="text-sm text-muted-foreground">إعداد روّاد المستقبل</div>
               </div>
@@ -190,8 +197,9 @@ function HomePage() {
       </section>
 
       {/* WHY */}
-      <section className="bg-secondary/50 py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden surface-soft py-20 sm:py-28">
+        <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-60" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="لماذا الرواد؟"
             title="مميزات تجعلنا الخيار الأمثل"
@@ -239,8 +247,9 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-secondary/50 py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden surface-soft py-20 sm:py-28">
+        <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-60" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="آراء الطلاب"
             title="قصص نجاح تلهمنا"
@@ -274,13 +283,16 @@ function HomePage() {
       {/* CTA */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-[2.5rem] gradient-navy px-6 py-16 text-center sm:px-12 sm:py-20">
-            <div className="absolute inset-0 ring-spot" />
+          <div className="relative overflow-hidden rounded-[2.5rem] gradient-navy px-6 py-16 text-center shadow-elegant sm:px-12 sm:py-20">
+            <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-30" />
+            <div className="absolute inset-0 hero-mesh opacity-80" />
+            <GatewayArch className="pointer-events-none absolute left-1/2 top-0 h-[140%] w-auto -translate-x-1/2 text-primary-foreground/[0.07]" />
             <div className="relative mx-auto max-w-2xl">
               <h2 className="text-3xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-4xl">
                 ابدأ رحلتك التعليمية معنا اليوم
               </h2>
-              <p className="mt-4 text-lg text-primary-foreground/75">
+              <GoldDivider className="mt-5" />
+              <p className="mt-5 text-lg text-primary-foreground/75">
                 خطوة واحدة تفصلك عن مستقبل أفضل. انضم إلى أكاديمية الرواد الآن.
               </p>
               <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
