@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle, MapPin, Send } from "lucide-react";
-import logo from "@/assets/alrowad-logo.png.asset.json";
+import logoLight from "@/assets/alrowad-logo-light.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/SocialLinks";
+import { GatewayArch, GoldDivider } from "@/components/BrandMotifs";
 import { DOMAIN, WHATSAPP_CHANNEL, WHATSAPP_LINK, WHATSAPP_NUMBER } from "@/lib/site-data";
 
 export function Footer() {
