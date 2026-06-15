@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { SectionHeading } from "@/components/SectionHeading";
+import { GatewayArch } from "@/components/BrandMotifs";
 import { SocialLinks } from "@/components/SocialLinks";
 import {
   DOMAIN,
