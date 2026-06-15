@@ -86,32 +86,29 @@ const testimonials = [
 function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden gradient-navy">
-        <img
-          src={heroImage}
-          alt="بوابة المعرفة نحو المستقبل"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/70 to-primary/95" />
-        <div className="absolute inset-0 ring-spot" />
+      {/* HERO — educational gateway concept */}
+      <section className="relative overflow-hidden gradient-navy text-primary-foreground">
+        {/* Layered brand atmosphere (no stock photo) */}
+        <div className="pointer-events-none absolute inset-0 hero-mesh" />
+        <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-40" />
+        {/* Large gateway arch — the institutional motif from the logo */}
+        <GatewayArch className="pointer-events-none absolute left-1/2 top-6 h-[115%] w-auto -translate-x-1/2 text-primary-foreground/[0.07]" />
+        {/* Winding knowledge path accents */}
+        <KnowledgePath className="pointer-events-none absolute right-4 top-1/2 hidden h-[26rem] w-auto -translate-y-1/2 text-accent/25 lg:block" />
+        <KnowledgePath className="pointer-events-none absolute left-4 top-1/2 hidden h-[26rem] w-auto -translate-y-1/2 scale-x-[-1] text-gold/20 lg:block" />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mx-auto inline-flex rounded-3xl bg-background p-3 shadow-elegant animate-fade">
-              <img
-                src={logo.url}
-                alt="شعار الرواد"
-                width={180}
-                height={180}
-                className="h-24 w-auto sm:h-28"
-              />
-            </div>
-            <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
+            <img
+              src={logoLight.url}
+              alt="شعار الرواد"
+              width={220}
+              height={220}
+              className="mx-auto h-28 w-auto animate-fade drop-shadow-[0_18px_45px_color-mix(in_oklab,var(--accent)_35%,transparent)] sm:h-36"
+            />
+            <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold backdrop-blur-sm">
               <Star className="h-3.5 w-3.5 fill-gold" />
-              نصنع روّاد المستقبل
+              مؤسسة تعليمية حديثة
             </span>
             <h1 className="mt-6 text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl lg:text-6xl animate-rise">
               انطلق نحو مستقبل أفضل مع الرواد
@@ -119,7 +116,8 @@ function HomePage() {
             <p className="mt-5 text-lg font-semibold text-accent sm:text-xl">
               تعليم اليوم يصنع مستقبل الغد
             </p>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
+            <GoldDivider className="mt-6" />
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
               نوفر برامج تعليمية متكاملة في المواد الدراسية واللغات والمواد الجامعية والكورسات
               التقنية والإبداعية، مع متابعة مستمرة وبيئة تعليمية احترافية.
             </p>
@@ -140,8 +138,9 @@ function HomePage() {
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-4 py-5 text-center backdrop-blur-sm"
+                className="relative overflow-hidden rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-4 py-5 text-center backdrop-blur-sm transition-colors hover:border-gold/30"
               >
+                <span className="absolute inset-x-6 top-0 h-px bg-gradient-to-l from-transparent via-gold/60 to-transparent" />
                 <div className="text-2xl font-extrabold text-gold sm:text-3xl">{s.value}</div>
                 <div className="mt-1 text-xs text-primary-foreground/70 sm:text-sm">{s.label}</div>
               </div>
@@ -149,6 +148,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* ABOUT */}
       <section className="py-20 sm:py-28">
