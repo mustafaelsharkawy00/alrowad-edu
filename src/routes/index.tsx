@@ -174,18 +174,20 @@ function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-accent/10 to-gold/10 blur-2xl" />
-              <div className="overflow-hidden rounded-[2rem] border border-border shadow-elegant">
-                <img
-                  src={heroImage}
-                  alt="بيئة الرواد التعليمية"
-                  loading="lazy"
-                  width={1200}
-                  height={900}
-                  className="aspect-[4/3] w-full object-cover"
-                />
+              <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-tr from-accent/10 to-gold/10 blur-2xl" />
+              {/* Branded gateway panel — institutional, no stock photo */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2.5rem] gradient-navy shadow-elegant">
+                <div className="absolute inset-0 dot-grid-light opacity-30" />
+                <div className="absolute inset-0 hero-mesh opacity-70" />
+                <GatewayArch className="absolute left-1/2 top-6 h-[105%] w-auto -translate-x-1/2 text-primary-foreground/15" />
+                <KnowledgePath className="absolute left-1/2 top-8 h-[78%] w-auto -translate-x-1/2 text-accent/70 float-soft" />
+                <NodeConstellation className="absolute bottom-6 left-6 h-16 w-auto text-gold/40" />
+                <div className="absolute bottom-7 right-7 text-right">
+                  <div className="text-sm font-semibold text-gold">بوابة المعرفة</div>
+                  <div className="text-xs text-primary-foreground/70">رحلة تعلّم متصاعدة</div>
+                </div>
               </div>
-              <div className="absolute -bottom-6 right-6 rounded-2xl border border-border bg-card px-6 py-4 shadow-card">
+              <div className="absolute -bottom-6 right-6 rounded-2xl border border-border bg-card px-6 py-4 shadow-float">
                 <div className="text-2xl font-extrabold text-primary">رؤية</div>
                 <div className="text-sm text-muted-foreground">إعداد روّاد المستقبل</div>
               </div>
