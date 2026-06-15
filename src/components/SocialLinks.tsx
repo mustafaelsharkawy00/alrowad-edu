@@ -43,7 +43,7 @@ const socials = [
   { label: "فيسبوك", href: FACEBOOK_LINK, Icon: FacebookIcon },
   { label: "إنستغرام", href: INSTAGRAM_LINK, Icon: InstagramIcon },
   { label: "تيك توك", href: TIKTOK_LINK, Icon: TikTokIcon },
-  { label: "واتساب", href: WHATSAPP_LINK, Icon: MessageCircle },
+  { label: "واتساب", href: WHATSAPP_LINK, Icon: WhatsAppIcon },
 ];
 
 export function SocialLinks({
