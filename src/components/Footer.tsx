@@ -90,10 +90,11 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-sm text-primary-foreground/60 sm:flex-row sm:px-6 lg:px-8">
+      <div className="relative">
+        <GoldDivider className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" />
+        <div className="mx-auto mt-2 flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-sm text-primary-foreground/60 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} الرواد. جميع الحقوق محفوظة.</p>
-          <p>نصنع روّاد المستقبل</p>
+          <p className="text-gold/90">نصنع روّاد المستقبل</p>
         </div>
       </div>
     </footer>
