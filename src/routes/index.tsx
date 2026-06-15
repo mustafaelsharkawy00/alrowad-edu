@@ -283,13 +283,16 @@ function HomePage() {
       {/* CTA */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-[2.5rem] gradient-navy px-6 py-16 text-center sm:px-12 sm:py-20">
-            <div className="absolute inset-0 ring-spot" />
+          <div className="relative overflow-hidden rounded-[2.5rem] gradient-navy px-6 py-16 text-center shadow-elegant sm:px-12 sm:py-20">
+            <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-30" />
+            <div className="absolute inset-0 hero-mesh opacity-80" />
+            <GatewayArch className="pointer-events-none absolute left-1/2 top-0 h-[140%] w-auto -translate-x-1/2 text-primary-foreground/[0.07]" />
             <div className="relative mx-auto max-w-2xl">
               <h2 className="text-3xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-4xl">
                 ابدأ رحلتك التعليمية معنا اليوم
               </h2>
-              <p className="mt-4 text-lg text-primary-foreground/75">
+              <GoldDivider className="mt-5" />
+              <p className="mt-5 text-lg text-primary-foreground/75">
                 خطوة واحدة تفصلك عن مستقبل أفضل. انضم إلى أكاديمية الرواد الآن.
               </p>
               <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
