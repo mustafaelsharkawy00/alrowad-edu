@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
 import { GatewayArch } from "@/components/BrandMotifs";
-import { programCategories, WHATSAPP_LINK } from "@/lib/site-data";
+import { programCategories, WHATSAPP_CTA } from "@/lib/site-data";
 
 export const Route = createFileRoute("/programs")({
   head: () => ({
