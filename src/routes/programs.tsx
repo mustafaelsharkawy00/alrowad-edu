@@ -1,10 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
 import { GatewayArch } from "@/components/BrandMotifs";
-import { programCategories, WHATSAPP_LINK } from "@/lib/site-data";
+import { programCategories, WHATSAPP_CTA } from "@/lib/site-data";
 
 export const Route = createFileRoute("/programs")({
   head: () => ({
@@ -69,13 +69,13 @@ function ProgramsPage() {
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-                  <Link to="/contact">
-                    سجل الآن
+                  <a href={WHATSAPP_CTA} target="_blank" rel="noopener noreferrer">
+                    ابدأ رحلتك
                     <ArrowLeft />
-                  </Link>
+                  </a>
                 </Button>
                 <Button asChild variant="whatsapp" size="xl" className="w-full sm:w-auto">
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <a href={WHATSAPP_CTA} target="_blank" rel="noopener noreferrer">
                     <MessageCircle />
                     تواصل عبر واتساب
                   </a>

@@ -252,6 +252,53 @@
     );
   }
 
+  /* Very light blue band — for alternating section rhythm */
+  .surface-blue {
+    background-image: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--accent) 8%, var(--background)) 0%,
+      color-mix(in oklab, var(--accent) 4%, var(--background)) 100%
+    );
+  }
+
+  /* Soft diagonal blue→gold wash for premium hierarchy */
+  .surface-wash {
+    background-image:
+      radial-gradient(
+        50% 60% at 100% 0%,
+        color-mix(in oklab, var(--accent) 10%, transparent),
+        transparent 70%
+      ),
+      radial-gradient(
+        45% 55% at 0% 100%,
+        color-mix(in oklab, var(--gold) 7%, transparent),
+        transparent 70%
+      ),
+      var(--background);
+  }
+
+  /* Premium navy icon tile gradient */
+  .tile-navy {
+    background-image: linear-gradient(
+      150deg,
+      oklch(0.32 0.11 259) 0%,
+      oklch(0.26 0.1 261) 100%
+    );
+  }
+
+  /* Animated hover glow used on premium cards */
+  .card-premium {
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.35s ease;
+  }
+
+  .animate-rise-delay {
+    animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: 0.12s;
+  }
+
   .gradient-gold {
     background-image: linear-gradient(
       120deg,

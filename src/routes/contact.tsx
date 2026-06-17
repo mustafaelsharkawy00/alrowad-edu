@@ -1,26 +1,15 @@
-import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { MessageCircle, MapPin, Send, Phone } from "lucide-react";
-import { toast } from "sonner";
+import { MessageCircle, MapPin, Send, Mail, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { SectionHeading } from "@/components/SectionHeading";
-import { GatewayArch } from "@/components/BrandMotifs";
+import { GatewayArch, GoldDivider } from "@/components/BrandMotifs";
 import { SocialLinks } from "@/components/SocialLinks";
 import {
   DOMAIN,
+  WHATSAPP_CHANNEL,
+  WHATSAPP_CTA,
   WHATSAPP_LINK,
   WHATSAPP_NUMBER,
-  programCategories,
 } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
@@ -30,60 +19,19 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "تواصل مع أكاديمية الرواد عبر واتساب أو نموذج التسجيل. نصنع روّاد المستقبل — ابدأ رحلتك التعليمية اليوم.",
+          "تواصل مع أكاديمية الرواد مباشرة عبر واتساب. نصنع روّاد المستقبل — ابدأ رحلتك التعليمية اليوم.",
       },
       { property: "og:title", content: "تواصل معنا | الرواد" },
       {
         property: "og:description",
-        content: "سجّل اهتمامك بأكاديمية الرواد وسنتواصل معك في أقرب وقت.",
+        content: "تواصل مع أكاديمية الرواد مباشرة عبر واتساب وسنرد عليك في أقرب وقت.",
       },
     ],
   }),
   component: ContactPage,
 });
 
-const stages = [
-  "المرحلة الابتدائية",
-  "المرحلة الإعدادية",
-  "المرحلة الثانوية",
-  "المرحلة الجامعية",
-  "أخرى",
-];
-
 function ContactPage() {
-  const [stage, setStage] = useState("");
-  const [program, setProgram] = useState("");
-
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const name = (data.get("name") as string)?.trim();
-    const phone = (data.get("phone") as string)?.trim();
-    const message = (data.get("message") as string)?.trim();
-
-    if (!name || !phone) {
-      toast.error("يرجى إدخال الاسم ورقم الهاتف");
-      return;
-    }
-
-    const lines = [
-      "طلب تسجيل جديد - أكاديمية الرواد",
-      `الاسم: ${name}`,
-      `رقم الهاتف: ${phone}`,
-      stage ? `المرحلة الدراسية: ${stage}` : "",
-      program ? `البرنامج المهتم به: ${program}` : "",
-      message ? `الرسالة: ${message}` : "",
-    ].filter(Boolean);
-
-    const url = `${WHATSAPP_LINK}?text=${encodeURIComponent(lines.join("\n"))}`;
-    window.open(url, "_blank", "noopener,noreferrer");
-    toast.success("تم تجهيز رسالتك! سيتم تحويلك إلى واتساب لإتمام التواصل.");
-    form.reset();
-    setStage("");
-    setProgram("");
-  }
-
   return (
     <>
       <section className="relative overflow-hidden gradient-navy">
@@ -97,140 +45,105 @@ function ContactPage() {
           <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl">
             ابدأ رحلتك التعليمية معنا
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
-            املأ النموذج وسنتواصل معك، أو راسلنا مباشرة عبر واتساب لأي استفسار.
+          <GoldDivider className="mt-6" />
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
+            فريق أكاديمية الرواد جاهز للإجابة على استفساراتك. راسلنا مباشرة عبر واتساب لاختيار البرنامج
+            الأنسب لك.
           </p>
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button asChild variant="whatsapp" size="xl" className="w-full sm:w-auto">
+              <a href={WHATSAPP_CTA} target="_blank" rel="noopener noreferrer">
+                <MessageCircle />
+                تواصل عبر واتساب
+              </a>
+            </Button>
+            <Button asChild variant="heroOutline" size="xl" className="w-full sm:w-auto">
+              <a href={WHATSAPP_CHANNEL} target="_blank" rel="noopener noreferrer">
+                <Send className="rotate-180" />
+                انضم إلى القناة
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:px-8">
-          {/* Info */}
-          <div>
-            <SectionHeading
-              eyebrow="معلومات التواصل"
-              title="نحن هنا لمساعدتك"
-              align="start"
-            />
-            <p className="mt-4 leading-relaxed text-muted-foreground">
-              فريق أكاديمية الرواد جاهز للإجابة على جميع استفساراتك ومساعدتك في اختيار البرنامج
-              المناسب.
-            </p>
+      <section className="surface-wash py-20 sm:py-28">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="معلومات التواصل"
+            title="نحن هنا لمساعدتك"
+            description="اختر الوسيلة الأنسب للتواصل مع أكاديمية الرواد."
+          />
 
-            <div className="mt-8 space-y-4">
-              <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-card"
-              >
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#25D366]/10 text-[#25D366]">
-                  <MessageCircle className="h-6 w-6" />
-                </div>
-                <div>
-                  <div className="font-bold text-primary">واتساب</div>
-                  <div className="text-sm text-muted-foreground" dir="ltr">
-                    {WHATSAPP_NUMBER}
-                  </div>
-                </div>
-              </a>
-
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft">
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-accent/10 text-accent">
-                  <MapPin className="h-6 w-6" />
-                </div>
-                <div>
-                  <div className="font-bold text-primary">الموقع الإلكتروني</div>
-                  <div className="text-sm text-muted-foreground">{DOMAIN}</div>
+          <div className="mt-14 grid gap-5 sm:grid-cols-2">
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group card-premium flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft hover:-translate-y-1 hover:border-accent/40 hover:shadow-card"
+            >
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-[#25D366]/10 text-[#25D366] transition-colors group-hover:bg-[#25D366] group-hover:text-white">
+                <MessageCircle className="h-7 w-7" />
+              </div>
+              <div>
+                <div className="font-extrabold text-primary">واتساب</div>
+                <div className="text-sm text-muted-foreground" dir="ltr">
+                  {WHATSAPP_NUMBER}
                 </div>
               </div>
+            </a>
 
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft">
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gold/10 text-gold">
-                  <Phone className="h-6 w-6" />
+            <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-accent/10 text-accent">
+                <Mail className="h-7 w-7" />
+              </div>
+              <div>
+                <div className="font-extrabold text-primary">البريد الإلكتروني</div>
+                <div className="text-sm text-muted-foreground" dir="ltr">
+                  info@{DOMAIN}
                 </div>
-                <div>
-                  <div className="font-bold text-primary">تابعنا على</div>
-                  <SocialLinks className="mt-2" />
-                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold/10 text-gold">
+                <MapPin className="h-7 w-7" />
+              </div>
+              <div>
+                <div className="font-extrabold text-primary">نطاق الخدمة</div>
+                <div className="text-sm text-muted-foreground">مصر · الوطن العربي والخليج</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-secondary text-primary">
+                <Send className="h-6 w-6 rotate-180" />
+              </div>
+              <div>
+                <div className="font-extrabold text-primary">تابعنا على</div>
+                <SocialLinks className="mt-2" />
               </div>
             </div>
           </div>
 
-          {/* Form */}
-          <div className="rounded-3xl border border-border bg-card p-6 shadow-elegant sm:p-8">
-            <h2 className="text-2xl font-extrabold text-primary">نموذج التسجيل</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              املأ بياناتك وسنعاود التواصل معك في أقرب وقت ممكن.
-            </p>
-
-            <form onSubmit={handleSubmit} className="mt-6 space-y-5">
-              <div className="space-y-2">
-                <Label htmlFor="name">الاسم</Label>
-                <Input id="name" name="name" placeholder="اكتب اسمك الكامل" required />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="phone">رقم الهاتف</Label>
-                <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  inputMode="tel"
-                  placeholder="أدخل رقم هاتفك"
-                  required
-                />
-              </div>
-
-              <div className="grid gap-5 sm:grid-cols-2">
-                <div className="space-y-2">
-                  <Label>المرحلة الدراسية</Label>
-                  <Select value={stage} onValueChange={setStage}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="اختر المرحلة" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {stages.map((s) => (
-                        <SelectItem key={s} value={s}>
-                          {s}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label>البرنامج المهتم به</Label>
-                  <Select value={program} onValueChange={setProgram}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="اختر البرنامج" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {programCategories.map((c) => (
-                        <SelectItem key={c.id} value={c.title}>
-                          {c.title}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message">الرسالة</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  placeholder="اكتب رسالتك أو استفسارك هنا..."
-                />
-              </div>
-
-              <Button type="submit" size="lg" className="w-full">
-                <Send className="rotate-180" />
-                إرسال
+          {/* Final WhatsApp CTA */}
+          <div className="relative mt-12 overflow-hidden rounded-[2rem] gradient-navy px-6 py-12 text-center shadow-elegant sm:px-10">
+            <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-30" />
+            <div className="absolute inset-0 hero-mesh opacity-70" />
+            <div className="relative mx-auto max-w-xl">
+              <h2 className="text-2xl font-extrabold text-balance text-primary-foreground sm:text-3xl">
+                جاهز للانطلاق؟ راسلنا الآن
+              </h2>
+              <p className="mt-3 text-primary-foreground/75">
+                اضغط الزر وابدأ محادثة مباشرة مع فريق أكاديمية الرواد.
+              </p>
+              <Button asChild variant="hero" size="xl" className="mt-7">
+                <a href={WHATSAPP_CTA} target="_blank" rel="noopener noreferrer">
+                  ابدأ المحادثة
+                  <ArrowLeft />
+                </a>
               </Button>
-            </form>
+            </div>
           </div>
         </div>
       </section>

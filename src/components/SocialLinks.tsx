@@ -54,7 +54,7 @@ export function SocialLinks({
   variant?: "light" | "dark";
 }) {
   return (
-    <div className={cn("flex items-center gap-2", className)}>
+    <div className={cn("flex items-center gap-2.5", className)}>
       {socials.map(({ label, href, Icon }) => (
         <a
           key={label}
@@ -62,14 +62,15 @@ export function SocialLinks({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={label}
+          title={label}
           className={cn(
-            "grid h-9 w-9 place-items-center rounded-full transition-all duration-300 hover:-translate-y-0.5",
+            "group grid h-10 w-10 place-items-center rounded-xl ring-1 ring-inset transition-all duration-300 hover:-translate-y-1 hover:scale-105",
             variant === "light"
-              ? "bg-secondary text-primary hover:bg-primary hover:text-primary-foreground"
-              : "bg-primary-foreground/10 text-primary-foreground hover:bg-accent hover:text-accent-foreground",
+              ? "bg-secondary text-primary ring-border hover:bg-primary hover:text-primary-foreground hover:ring-gold/60"
+              : "bg-primary-foreground/10 text-primary-foreground ring-primary-foreground/15 hover:bg-gold hover:text-gold-foreground hover:ring-gold",
           )}
         >
-          <Icon className="h-[1.05rem] w-[1.05rem]" />
+          <Icon className="h-[1.15rem] w-[1.15rem] transition-transform duration-300 group-hover:scale-110" />
         </a>
       ))}
     </div>
