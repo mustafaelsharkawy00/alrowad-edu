@@ -69,13 +69,13 @@ function ProgramsPage() {
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-                  <Link to="/contact">
-                    سجل الآن
+                  <a href={WHATSAPP_CTA} target="_blank" rel="noopener noreferrer">
+                    ابدأ رحلتك
                     <ArrowLeft />
-                  </Link>
+                  </a>
                 </Button>
                 <Button asChild variant="whatsapp" size="xl" className="w-full sm:w-auto">
-                  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <a href={WHATSAPP_CTA} target="_blank" rel="noopener noreferrer">
                     <MessageCircle />
                     تواصل عبر واتساب
                   </a>
