@@ -118,3 +118,8 @@ export const FACEBOOK_LINK = "https://www.facebook.com/profile.php?id=6159091220
 export const INSTAGRAM_LINK = "https://www.instagram.com/alrowad_edu";
 export const TIKTOK_LINK = "https://www.tiktok.com/@alrowad.edu";
 export const DOMAIN = "alrowad.edu";
+
+/** Pre-filled WhatsApp conversation — the primary conversion channel. */
+export const WHATSAPP_CTA = `${WHATSAPP_LINK}?text=${encodeURIComponent(
+  "مرحبًا أكاديمية الرواد، أرغب في معرفة المزيد عن برامجكم التعليمية.",
+)}`;
