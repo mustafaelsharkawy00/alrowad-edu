@@ -6,8 +6,27 @@ import {
   Building2,
   Code2,
   Palette,
+  BookOpen,
+  School,
+  Briefcase,
+  Globe2,
   type LucideIcon,
 } from "lucide-react";
+
+export interface AudienceItem {
+  icon: LucideIcon;
+  title: string;
+}
+
+export const audienceItems: AudienceItem[] = [
+  { icon: BookOpen, title: "المناهج المصرية" },
+  { icon: Languages, title: "مدارس اللغات" },
+  { icon: School, title: "المدارس التجريبية" },
+  { icon: GraduationCap, title: "طلاب الجامعات" },
+  { icon: Briefcase, title: "المهارات المهنية" },
+  { icon: Globe2, title: "الوطن العربي والخليج" },
+];
+
 
 export interface ProgramCategory {
   id: string;
