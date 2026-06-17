@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, MapPin, Send, Mail, Phone } from "lucide-react";
+import { MessageCircle, MapPin, Send, Mail } from "lucide-react";
 import logoLight from "@/assets/alrowad-logo-light.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/SocialLinks";
