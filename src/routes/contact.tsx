@@ -67,7 +67,7 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="surface-wash py-20 sm:py-28">
+      <section className="bg-secondary py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="معلومات التواصل"
@@ -80,9 +80,9 @@ function ContactPage() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="group card-premium flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft hover:-translate-y-1 hover:border-accent/40 hover:shadow-card"
+              className="group card-elevated flex items-center gap-4 p-6"
             >
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-[#25D366]/10 text-[#25D366] transition-colors group-hover:bg-[#25D366] group-hover:text-white">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2 transition-colors group-hover:bg-gold group-hover:text-gold-foreground">
                 <MessageCircle className="h-7 w-7" />
               </div>
               <div>
@@ -93,8 +93,8 @@ function ContactPage() {
               </div>
             </a>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-accent/10 text-accent">
+            <div className="card-elevated flex items-center gap-4 p-6">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2">
                 <Mail className="h-7 w-7" />
               </div>
               <div>
@@ -105,8 +105,8 @@ function ContactPage() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold/10 text-gold">
+            <div className="card-elevated flex items-center gap-4 p-6">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2">
                 <MapPin className="h-7 w-7" />
               </div>
               <div>
@@ -115,8 +115,8 @@ function ContactPage() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 shadow-soft">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-secondary text-primary">
+            <div className="card-elevated flex items-center gap-4 p-6">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2">
                 <Send className="h-6 w-6 rotate-180" />
               </div>
               <div>
