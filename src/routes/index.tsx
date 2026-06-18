@@ -198,7 +198,7 @@ function HomePage() {
       </section>
 
       {/* AUDIENCE — educational systems & tracks we serve */}
-      <section className="relative overflow-hidden bg-secondary py-20 sm:py-28">
+      <section className="relative overflow-hidden bg-background py-20 sm:py-28">
         <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-50" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
