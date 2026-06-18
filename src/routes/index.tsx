@@ -307,7 +307,7 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-28">
+      <section className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2.5rem] gradient-navy px-6 py-16 text-center shadow-elegant sm:px-12 sm:py-20">
             <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-30" />
