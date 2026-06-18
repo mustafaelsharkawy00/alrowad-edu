@@ -244,8 +244,8 @@ function HomePage() {
       </section>
 
       {/* PROGRAMS OVERVIEW */}
-      <section className="relative overflow-hidden surface-soft py-20 sm:py-28">
-        <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-50" />
+      <section className="relative overflow-hidden bg-background py-20 sm:py-28">
+        <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-40" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="برامجنا"
