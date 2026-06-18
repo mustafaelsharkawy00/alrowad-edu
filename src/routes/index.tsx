@@ -221,7 +221,7 @@ function HomePage() {
       </section>
 
       {/* WHY */}
-      <section className="py-20 sm:py-28">
+      <section className="bg-secondary py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="لماذا الرواد؟"
