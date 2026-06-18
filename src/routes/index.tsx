@@ -11,7 +11,7 @@ import {
   Quote,
   Star,
 } from "lucide-react";
-import logoLight from "@/assets/alrowad-logo-light.png.asset.json";
+import logoLight from "@/assets/logowb.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
@@ -113,7 +113,7 @@ function HomePage() {
             <h1 className="mt-6 text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl lg:text-6xl animate-rise">
               انطلق نحو مستقبل أفضل مع الرواد
             </h1>
-            <p className="mt-5 text-lg font-semibold text-accent sm:text-xl animate-rise-delay">
+            <p className="mt-5 text-lg font-semibold text-on-navy sm:text-xl animate-rise-delay">
               تعليم اليوم يصنع مستقبل الغد
             </p>
             <GoldDivider className="mt-6" />
@@ -153,7 +153,7 @@ function HomePage() {
       </section>
 
       {/* ABOUT */}
-      <section className="surface-wash py-20 sm:py-28">
+      <section className="bg-secondary py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
@@ -198,7 +198,7 @@ function HomePage() {
       </section>
 
       {/* AUDIENCE — educational systems & tracks we serve */}
-      <section className="relative overflow-hidden surface-blue py-20 sm:py-28">
+      <section className="relative overflow-hidden bg-background py-20 sm:py-28">
         <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-50" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -210,7 +210,7 @@ function HomePage() {
             {audienceItems.map(({ icon, title }) => (
               <div
                 key={title}
-                className="group card-premium flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft hover:-translate-y-1 hover:border-accent/40 hover:shadow-card"
+                className="group card-elevated flex items-center gap-4 p-5"
               >
                 <IconTile icon={icon} />
                 <span className="text-base font-extrabold text-primary">{title}</span>
@@ -221,7 +221,7 @@ function HomePage() {
       </section>
 
       {/* WHY */}
-      <section className="py-20 sm:py-28">
+      <section className="bg-secondary py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="لماذا الرواد؟"
@@ -232,7 +232,7 @@ function HomePage() {
             {whyCards.map(({ icon, title, text }) => (
               <div
                 key={title}
-                className="group card-premium rounded-3xl border border-border bg-card p-7 shadow-soft hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-elegant"
+                className="group card-elevated p-7"
               >
                 <IconTile icon={icon} size="lg" />
                 <h3 className="mt-5 text-lg font-extrabold text-primary">{title}</h3>
@@ -244,8 +244,8 @@ function HomePage() {
       </section>
 
       {/* PROGRAMS OVERVIEW */}
-      <section className="relative overflow-hidden surface-soft py-20 sm:py-28">
-        <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-50" />
+      <section className="relative overflow-hidden bg-background py-20 sm:py-28">
+        <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-40" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="برامجنا"
@@ -269,7 +269,7 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="surface-blue py-20 sm:py-28">
+      <section className="bg-secondary py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="آراء الطلاب"
@@ -280,9 +280,9 @@ function HomePage() {
             {testimonials.map((t) => (
               <figure
                 key={t.name}
-                className="group card-premium flex h-full flex-col rounded-3xl border border-border bg-card p-7 shadow-soft hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-elegant"
+                className="group card-elevated flex h-full flex-col p-7"
               >
-                <Quote className="h-8 w-8 text-accent/40" />
+                <Quote className="h-9 w-9 text-gold" />
                 <blockquote className="mt-4 flex-1 text-base leading-relaxed text-foreground/90">
                   {t.text}
                 </blockquote>
@@ -307,7 +307,7 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-28">
+      <section className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2.5rem] gradient-navy px-6 py-16 text-center shadow-elegant sm:px-12 sm:py-20">
             <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-30" />

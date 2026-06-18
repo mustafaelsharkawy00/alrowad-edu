@@ -37,6 +37,9 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-gold: var(--gold);
   --color-gold-foreground: var(--gold-foreground);
+  --color-on-navy: var(--on-navy);
+  --color-icon-surface: var(--icon-surface);
+  --color-primary-2: var(--primary-2);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -52,40 +55,47 @@
 :root {
   --radius: 0.875rem;
 
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.2795 0.0368 260.03);
+  --background: #ffffff;
+  --foreground: #1e293b;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2795 0.0368 260.03);
+  --card: #ffffff;
+  --card-foreground: #1e293b;
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2795 0.0368 260.03);
+  --popover: #ffffff;
+  --popover-foreground: #1e293b;
 
-  /* Navy */
-  --primary: oklch(0.3003 0.1087 259.79);
-  --primary-foreground: oklch(1 0 0);
+  /* Navy (deep brand) */
+  --primary: #031b4e;
+  --primary-foreground: #ffffff;
 
-  /* Soft navy-tinted surface */
-  --secondary: oklch(0.968 0.012 255);
-  --secondary-foreground: oklch(0.3003 0.1087 259.79);
+  /* Secondary navy used in gradients */
+  --primary-2: #0a2e7a;
 
-  --muted: oklch(0.968 0.012 255);
-  --muted-foreground: oklch(0.52 0.03 258);
+  /* Soft blue section surface */
+  --secondary: #f5f9ff;
+  --secondary-foreground: #031b4e;
+
+  --muted: #f5f9ff;
+  --muted-foreground: #5b6b85;
 
   /* Sky blue */
-  --accent: oklch(0.7053 0.1643 245.92);
-  --accent-foreground: oklch(0.2 0.08 259);
+  --accent: #2ea7ff;
+  --accent-foreground: #031b4e;
+
+  /* Icon tile surface + light text on navy */
+  --icon-surface: #eef5ff;
+  --on-navy: #dce8ff;
 
   /* Luxury gold */
-  --gold: oklch(0.7268 0.1145 83.57);
-  --gold-foreground: oklch(0.2795 0.0368 260.03);
+  --gold: #d4af37;
+  --gold-foreground: #031b4e;
 
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
+  --destructive-foreground: #ffffff;
 
-  --border: oklch(0.92 0.012 255);
-  --input: oklch(0.92 0.012 255);
-  --ring: oklch(0.7053 0.1643 245.92);
+  --border: #e8eef8;
+  --input: #e8eef8;
+  --ring: #2ea7ff;
 
   --sidebar: oklch(0.984 0.003 247.858);
   --sidebar-foreground: oklch(0.2795 0.0368 260.03);
@@ -139,12 +149,43 @@
 @layer utilities {
   .gradient-navy {
     background-image: linear-gradient(
-      155deg,
-      oklch(0.24 0.09 260) 0%,
-      oklch(0.3003 0.1087 259.79) 55%,
-      oklch(0.36 0.11 256) 100%
+      135deg,
+      #031b4e 0%,
+      #0a2e7a 100%
     );
   }
+
+  .gradient-header {
+    background-image: linear-gradient(90deg, #031b4e 0%, #0a2e7a 100%);
+  }
+
+  /* Unified premium card */
+  .card-elevated {
+    background-color: var(--card);
+    border: 1px solid #e8eef8;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.3s ease;
+  }
+
+  .card-elevated:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+    box-shadow: 0 16px 40px rgba(3, 27, 78, 0.12);
+  }
+
+  /* Gold decorative underline used under section titles */
+  .title-rule {
+    display: block;
+    height: 3px;
+    width: 60px;
+    border-radius: 999px;
+    background-color: #d4af37;
+  }
+
 
   .text-balance {
     text-wrap: balance;

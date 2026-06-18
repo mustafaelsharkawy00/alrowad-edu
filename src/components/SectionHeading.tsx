@@ -42,6 +42,12 @@ export function SectionHeading({
       >
         {title}
       </h2>
+      <span
+        className={cn(
+          "title-rule mt-4",
+          align === "center" ? "mx-auto" : "ms-0 me-auto",
+        )}
+      />
       {description && (
         <p
           className={cn(

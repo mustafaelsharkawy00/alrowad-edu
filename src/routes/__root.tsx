@@ -14,7 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Toaster } from "../components/ui/sonner";
-import logo from "../assets/alrowad-logo.png.asset.json";
+import logo from "../assets/logowb.png.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "أكاديمية الرواد مؤسسة تعليمية حديثة تقدم برامج متكاملة في المواد الدراسية واللغات والمواد الجامعية والكورسات التقنية والإبداعية.",
       },
       { name: "author", content: "الرواد" },
-      { name: "theme-color", content: "#062A63" },
+      { name: "theme-color", content: "#031B4E" },
       { property: "og:title", content: "الرواد | نصنع روّاد المستقبل" },
       {
         property: "og:description",

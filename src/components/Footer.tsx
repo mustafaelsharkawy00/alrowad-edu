@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle, MapPin, Send, Mail } from "lucide-react";
-import logoLight from "@/assets/alrowad-logo-light.png.asset.json";
+import logoLight from "@/assets/logowb.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/SocialLinks";
 import { GatewayArch, GoldDivider } from "@/components/BrandMotifs";
@@ -19,7 +19,7 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden gradient-navy text-primary-foreground">
+    <footer className="relative overflow-hidden bg-[#021338] text-primary-foreground border-t-2 border-gold">
       <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-25" />
       <div className="pointer-events-none absolute inset-0 hero-mesh opacity-40" />
       <GatewayArch className="pointer-events-none absolute -bottom-16 left-1/2 h-80 w-auto -translate-x-1/2 text-primary-foreground/[0.05]" />
@@ -68,12 +68,12 @@ export function Footer() {
             <span className="h-px w-6 bg-gold/60" />
             روابط سريعة
           </h3>
-          <ul className="mt-5 space-y-3 text-primary-foreground/75">
+          <ul className="mt-5 space-y-3 text-on-navy">
             {quickLinks.map((l) => (
               <li key={l.to}>
                 <Link
                   to={l.to}
-                  className="inline-flex items-center gap-2 transition-colors hover:text-primary-foreground"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-gold"
                 >
                   <span className="h-1.5 w-1.5 rotate-45 bg-gold/70" />
                   {l.label}
@@ -89,29 +89,29 @@ export function Footer() {
             <span className="h-px w-6 bg-gold/60" />
             معلومات التواصل
           </h3>
-          <ul className="mt-5 space-y-4 text-primary-foreground/75">
+          <ul className="mt-5 space-y-4 text-on-navy">
             <li>
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 transition-colors hover:text-primary-foreground"
+                className="group flex items-center gap-3 transition-colors hover:text-gold"
                 dir="ltr"
               >
-                <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-accent transition-colors group-hover:bg-gold group-hover:text-gold-foreground">
+                <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-gold transition-colors group-hover:bg-gold group-hover:text-gold-foreground">
                   <MessageCircle className="h-4 w-4" />
                 </span>
                 {WHATSAPP_NUMBER}
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-accent">
+              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-gold">
                 <Mail className="h-4 w-4" />
               </span>
               <span dir="ltr">info@{DOMAIN}</span>
             </li>
             <li className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-accent">
+              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-gold">
                 <MapPin className="h-4 w-4" />
               </span>
               مصر · الوطن العربي والخليج
