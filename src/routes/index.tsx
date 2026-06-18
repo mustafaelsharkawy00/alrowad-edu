@@ -113,7 +113,7 @@ function HomePage() {
             <h1 className="mt-6 text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl lg:text-6xl animate-rise">
               انطلق نحو مستقبل أفضل مع الرواد
             </h1>
-            <p className="mt-5 text-lg font-semibold text-accent sm:text-xl animate-rise-delay">
+            <p className="mt-5 text-lg font-semibold text-on-navy sm:text-xl animate-rise-delay">
               تعليم اليوم يصنع مستقبل الغد
             </p>
             <GoldDivider className="mt-6" />
