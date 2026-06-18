@@ -232,7 +232,7 @@ function HomePage() {
             {whyCards.map(({ icon, title, text }) => (
               <div
                 key={title}
-                className="group card-premium rounded-3xl border border-border bg-card p-7 shadow-soft hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-elegant"
+                className="group card-elevated p-7"
               >
                 <IconTile icon={icon} size="lg" />
                 <h3 className="mt-5 text-lg font-extrabold text-primary">{title}</h3>
