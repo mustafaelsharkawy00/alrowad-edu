@@ -16,9 +16,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "rounded-full hover:bg-secondary hover:text-secondary-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-accent text-accent-foreground shadow-elegant hover:-translate-y-0.5 hover:shadow-[0_28px_70px_-22px_color-mix(in_oklab,var(--accent)_55%,transparent)]",
+        hero: "bg-gold text-gold-foreground shadow-elegant hover:-translate-y-0.5 hover:bg-gold/90 hover:shadow-[0_28px_70px_-22px_color-mix(in_oklab,var(--gold)_55%,transparent)]",
         heroOutline:
-          "border border-primary-foreground/30 bg-primary-foreground/5 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/15 hover:-translate-y-0.5",
+          "border border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:-translate-y-0.5",
         gold: "bg-gold text-gold-foreground shadow-soft hover:bg-gold/90 hover:-translate-y-0.5",
         whatsapp: "bg-[#25D366] text-white shadow-soft hover:bg-[#1FB257] hover:-translate-y-0.5",
       },
