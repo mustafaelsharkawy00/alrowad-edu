@@ -4,7 +4,7 @@ import { IconTile } from "@/components/IconTile";
 export function ProgramCard({ category }: { category: ProgramCategory }) {
   const { icon: Icon, title, description, items } = category;
   return (
-    <article className="group card-premium relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-soft hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-elegant">
+    <article className="group card-elevated relative flex h-full flex-col overflow-hidden p-7">
       {/* top reveal bar */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1 origin-right scale-x-0 bg-gradient-to-l from-gold via-accent to-primary transition-transform duration-300 group-hover:scale-x-100" />
       {/* soft corner glow */}
