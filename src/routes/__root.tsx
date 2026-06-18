@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "أكاديمية الرواد مؤسسة تعليمية حديثة تقدم برامج متكاملة في المواد الدراسية واللغات والمواد الجامعية والكورسات التقنية والإبداعية.",
       },
       { name: "author", content: "الرواد" },
-      { name: "theme-color", content: "#062A63" },
+      { name: "theme-color", content: "#031B4E" },
       { property: "og:title", content: "الرواد | نصنع روّاد المستقبل" },
       {
         property: "og:description",
