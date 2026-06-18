@@ -210,7 +210,7 @@ function HomePage() {
             {audienceItems.map(({ icon, title }) => (
               <div
                 key={title}
-                className="group card-premium flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft hover:-translate-y-1 hover:border-accent/40 hover:shadow-card"
+                className="group card-elevated flex items-center gap-4 p-5"
               >
                 <IconTile icon={icon} />
                 <span className="text-base font-extrabold text-primary">{title}</span>
