@@ -280,9 +280,9 @@ function HomePage() {
             {testimonials.map((t) => (
               <figure
                 key={t.name}
-                className="group card-premium flex h-full flex-col rounded-3xl border border-border bg-card p-7 shadow-soft hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-elegant"
+                className="group card-elevated flex h-full flex-col p-7"
               >
-                <Quote className="h-8 w-8 text-accent/40" />
+                <Quote className="h-9 w-9 text-gold" />
                 <blockquote className="mt-4 flex-1 text-base leading-relaxed text-foreground/90">
                   {t.text}
                 </blockquote>
