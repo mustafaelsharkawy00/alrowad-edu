@@ -154,7 +154,6 @@ function HomePage() {
 
       {/* ABOUT */}
       <section className="bg-background py-20 sm:py-28">
-        <div className="pointer-events-none absolute inset-0" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
