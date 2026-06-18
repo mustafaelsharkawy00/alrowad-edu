@@ -19,7 +19,7 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden gradient-navy text-primary-foreground">
+    <footer className="relative overflow-hidden bg-[#021338] text-primary-foreground border-t-2 border-gold">
       <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-25" />
       <div className="pointer-events-none absolute inset-0 hero-mesh opacity-40" />
       <GatewayArch className="pointer-events-none absolute -bottom-16 left-1/2 h-80 w-auto -translate-x-1/2 text-primary-foreground/[0.05]" />
