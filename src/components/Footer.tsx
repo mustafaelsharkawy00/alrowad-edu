@@ -68,12 +68,12 @@ export function Footer() {
             <span className="h-px w-6 bg-gold/60" />
             روابط سريعة
           </h3>
-          <ul className="mt-5 space-y-3 text-primary-foreground/75">
+          <ul className="mt-5 space-y-3 text-on-navy">
             {quickLinks.map((l) => (
               <li key={l.to}>
                 <Link
                   to={l.to}
-                  className="inline-flex items-center gap-2 transition-colors hover:text-primary-foreground"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-gold"
                 >
                   <span className="h-1.5 w-1.5 rotate-45 bg-gold/70" />
                   {l.label}
