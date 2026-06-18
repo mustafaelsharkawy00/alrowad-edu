@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 type IconTileSize = "sm" | "md" | "lg";
 
 const sizeMap: Record<IconTileSize, { box: string; icon: string }> = {
-  sm: { box: "h-11 w-11 rounded-xl", icon: "h-5 w-5" },
-  md: { box: "h-14 w-14 rounded-2xl", icon: "h-7 w-7" },
-  lg: { box: "h-16 w-16 rounded-2xl", icon: "h-8 w-8" },
+  sm: { box: "h-11 w-11 rounded-[14px]", icon: "h-5 w-5" },
+  md: { box: "h-14 w-14 rounded-[16px]", icon: "h-7 w-7" },
+  lg: { box: "h-16 w-16 rounded-[16px]", icon: "h-8 w-8" },
 };
 
 /**
