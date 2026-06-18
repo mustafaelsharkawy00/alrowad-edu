@@ -149,12 +149,43 @@
 @layer utilities {
   .gradient-navy {
     background-image: linear-gradient(
-      155deg,
-      oklch(0.24 0.09 260) 0%,
-      oklch(0.3003 0.1087 259.79) 55%,
-      oklch(0.36 0.11 256) 100%
+      135deg,
+      #031b4e 0%,
+      #0a2e7a 100%
     );
   }
+
+  .gradient-header {
+    background-image: linear-gradient(90deg, #031b4e 0%, #0a2e7a 100%);
+  }
+
+  /* Unified premium card */
+  .card-elevated {
+    background-color: var(--card);
+    border: 1px solid #e8eef8;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.3s ease;
+  }
+
+  .card-elevated:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+    box-shadow: 0 16px 40px rgba(3, 27, 78, 0.12);
+  }
+
+  /* Gold decorative underline used under section titles */
+  .title-rule {
+    display: block;
+    height: 3px;
+    width: 60px;
+    border-radius: 999px;
+    background-color: #d4af37;
+  }
+
 
   .text-balance {
     text-wrap: balance;
