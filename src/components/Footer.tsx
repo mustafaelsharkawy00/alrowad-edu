@@ -89,29 +89,29 @@ export function Footer() {
             <span className="h-px w-6 bg-gold/60" />
             معلومات التواصل
           </h3>
-          <ul className="mt-5 space-y-4 text-primary-foreground/75">
+          <ul className="mt-5 space-y-4 text-on-navy">
             <li>
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 transition-colors hover:text-primary-foreground"
+                className="group flex items-center gap-3 transition-colors hover:text-gold"
                 dir="ltr"
               >
-                <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-accent transition-colors group-hover:bg-gold group-hover:text-gold-foreground">
+                <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-gold transition-colors group-hover:bg-gold group-hover:text-gold-foreground">
                   <MessageCircle className="h-4 w-4" />
                 </span>
                 {WHATSAPP_NUMBER}
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-accent">
+              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-gold">
                 <Mail className="h-4 w-4" />
               </span>
               <span dir="ltr">info@{DOMAIN}</span>
             </li>
             <li className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-accent">
+              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-gold">
                 <MapPin className="h-4 w-4" />
               </span>
               مصر · الوطن العربي والخليج
