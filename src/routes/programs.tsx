@@ -50,8 +50,10 @@ function ProgramsPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {programCategories.map((category) => (
-              <ProgramCard key={category.id} category={category} />
+            {programCategories.map((category, i) => (
+              <Reveal key={category.id} delay={(i % 3) * 0.1} className="h-full">
+                <ProgramCard category={category} />
+              </Reveal>
             ))}
           </div>
         </div>
