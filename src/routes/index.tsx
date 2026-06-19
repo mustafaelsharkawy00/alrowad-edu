@@ -214,14 +214,13 @@ function HomePage() {
             description="صُممت برامج الرواد لتواكب احتياجات الطلاب باختلاف أنظمتهم التعليمية وأهدافهم الأكاديمية، من المراحل الدراسية الأولى وحتى الدراسة الجامعية والمهارات المهنية، مع خدمات تعليمية تصل إلى المتعلمين داخل مصر وخارجها."
           />
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {audienceItems.map(({ icon, title }) => (
-              <div
-                key={title}
-                className="group card-elevated flex items-center gap-4 p-5"
-              >
-                <IconTile icon={icon} />
-                <span className="text-base font-extrabold text-primary">{title}</span>
-              </div>
+            {audienceItems.map(({ icon, title }, i) => (
+              <Reveal key={title} delay={(i % 3) * 0.1}>
+                <div className="group card-elevated flex items-center gap-4 p-5">
+                  <IconTile icon={icon} />
+                  <span className="text-base font-extrabold text-primary">{title}</span>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
