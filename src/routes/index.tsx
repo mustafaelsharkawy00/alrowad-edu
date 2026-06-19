@@ -110,10 +110,13 @@ function HomePage() {
               <Star className="h-3.5 w-3.5 fill-gold" />
               مؤسسة تعليمية حديثة
             </span>
-            <h1 className="mt-6 text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl lg:text-6xl animate-rise">
+            <h1 className="mt-6 text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl lg:text-6xl fade-up">
               انطلق نحو مستقبل أفضل مع الرواد
             </h1>
-            <p className="mt-5 text-lg font-semibold text-on-navy sm:text-xl animate-rise-delay">
+            <p
+              className="mt-5 text-lg font-semibold text-on-navy sm:text-xl fade-up"
+              style={{ "--fade-delay": "0.2s" } as React.CSSProperties}
+            >
               تعليم اليوم يصنع مستقبل الغد
             </p>
             <GoldDivider className="mt-6" />
@@ -121,7 +124,10 @@ function HomePage() {
               نوفر برامج تعليمية متكاملة في المواد الدراسية واللغات والمواد الجامعية والكورسات
               التقنية والإبداعية، مع متابعة مستمرة وبيئة تعليمية احترافية.
             </p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div
+              className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row fade-up"
+              style={{ "--fade-delay": "0.4s" } as React.CSSProperties}
+            >
               <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
                 <a href={WHATSAPP_CTA} target="_blank" rel="noopener noreferrer">
                   ابدأ رحلتك
