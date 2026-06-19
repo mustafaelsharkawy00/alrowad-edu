@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
 import { IconTile } from "@/components/IconTile";
+import { Reveal } from "@/components/Reveal";
 import {
   GatewayArch,
   KnowledgePath,
