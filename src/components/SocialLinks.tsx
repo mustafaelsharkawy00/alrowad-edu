@@ -1,8 +1,11 @@
 import {
   FACEBOOK_LINK,
   INSTAGRAM_LINK,
+  SNAPCHAT_LINK,
+  THREADS_LINK,
   TIKTOK_LINK,
   WHATSAPP_LINK,
+  X_LINK,
 } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
