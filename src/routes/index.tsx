@@ -235,15 +235,14 @@ function HomePage() {
             description="نجمع بين الخبرة الأكاديمية والأساليب الحديثة لنمنح كل طالب تجربة تعليمية استثنائية."
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {whyCards.map(({ icon, title, text }) => (
-              <div
-                key={title}
-                className="group card-elevated p-7"
-              >
-                <IconTile icon={icon} size="lg" />
-                <h3 className="mt-5 text-lg font-extrabold text-primary">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
-              </div>
+            {whyCards.map(({ icon, title, text }, i) => (
+              <Reveal key={title} delay={(i % 3) * 0.1} className="h-full">
+                <div className="group card-elevated h-full p-7">
+                  <IconTile icon={icon} size="lg" />
+                  <h3 className="mt-5 text-lg font-extrabold text-primary">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
