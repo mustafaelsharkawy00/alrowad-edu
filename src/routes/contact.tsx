@@ -80,54 +80,62 @@ function ContactPage() {
           />
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2">
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group card-elevated flex items-center gap-4 p-6"
-            >
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2 transition-colors group-hover:bg-gold group-hover:text-gold-foreground">
-                <MessageCircle className="h-7 w-7" />
-              </div>
-              <div>
-                <div className="font-extrabold text-primary">واتساب</div>
-                <div className="text-sm text-muted-foreground" dir="ltr">
-                  {WHATSAPP_NUMBER}
+            <Reveal delay={0} className="h-full">
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group card-elevated flex h-full items-center gap-4 p-6"
+              >
+                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2 transition-colors group-hover:bg-gold group-hover:text-gold-foreground">
+                  <MessageCircle className="h-7 w-7" />
+                </div>
+                <div>
+                  <div className="font-extrabold text-primary">واتساب</div>
+                  <div className="text-sm text-muted-foreground" dir="ltr">
+                    {WHATSAPP_NUMBER}
+                  </div>
+                </div>
+              </a>
+            </Reveal>
+
+            <Reveal delay={0.1} className="h-full">
+              <div className="card-elevated flex h-full items-center gap-4 p-6">
+                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2">
+                  <Mail className="h-7 w-7" />
+                </div>
+                <div>
+                  <div className="font-extrabold text-primary">البريد الإلكتروني</div>
+                  <div className="text-sm text-muted-foreground" dir="ltr">
+                    info@{DOMAIN}
+                  </div>
                 </div>
               </div>
-            </a>
+            </Reveal>
 
-            <div className="card-elevated flex items-center gap-4 p-6">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2">
-                <Mail className="h-7 w-7" />
-              </div>
-              <div>
-                <div className="font-extrabold text-primary">البريد الإلكتروني</div>
-                <div className="text-sm text-muted-foreground" dir="ltr">
-                  info@{DOMAIN}
+            <Reveal delay={0.2} className="h-full">
+              <div className="card-elevated flex h-full items-center gap-4 p-6">
+                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2">
+                  <MapPin className="h-7 w-7" />
+                </div>
+                <div>
+                  <div className="font-extrabold text-primary">نطاق الخدمة</div>
+                  <div className="text-sm text-muted-foreground">مصر · الوطن العربي والخليج</div>
                 </div>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="card-elevated flex items-center gap-4 p-6">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2">
-                <MapPin className="h-7 w-7" />
+            <Reveal delay={0.3} className="h-full">
+              <div className="card-elevated flex h-full items-center gap-4 p-6">
+                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2">
+                  <Send className="h-6 w-6 rotate-180" />
+                </div>
+                <div>
+                  <div className="font-extrabold text-primary">تابعنا على</div>
+                  <SocialLinks className="mt-2" />
+                </div>
               </div>
-              <div>
-                <div className="font-extrabold text-primary">نطاق الخدمة</div>
-                <div className="text-sm text-muted-foreground">مصر · الوطن العربي والخليج</div>
-              </div>
-            </div>
-
-            <div className="card-elevated flex items-center gap-4 p-6">
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-[16px] border border-gold bg-icon-surface text-primary-2">
-                <Send className="h-6 w-6 rotate-180" />
-              </div>
-              <div>
-                <div className="font-extrabold text-primary">تابعنا على</div>
-                <SocialLinks className="mt-2" />
-              </div>
-            </div>
+            </Reveal>
           </div>
 
           {/* Final WhatsApp CTA */}
