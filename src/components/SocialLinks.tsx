@@ -84,7 +84,7 @@ export function SocialLinks({
   variant?: "light" | "dark";
 }) {
   return (
-    <div className={cn("flex items-center gap-2.5", className)}>
+    <div className={cn("flex flex-wrap items-center gap-2.5", className)}>
       {socials.map(({ label, href, Icon }) => (
         <a
           key={label}
