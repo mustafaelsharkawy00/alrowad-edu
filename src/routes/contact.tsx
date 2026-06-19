@@ -43,11 +43,14 @@ function ContactPage() {
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
             تواصل معنا
           </span>
-          <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl">
+          <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl fade-up">
             ابدأ رحلتك التعليمية معنا
           </h1>
           <GoldDivider className="mt-6" />
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
+          <p
+            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg fade-up"
+            style={{ "--fade-delay": "0.2s" } as React.CSSProperties}
+          >
             فريق أكاديمية الرواد جاهز للإجابة على استفساراتك. راسلنا مباشرة عبر واتساب لاختيار البرنامج
             الأنسب لك.
           </p>
