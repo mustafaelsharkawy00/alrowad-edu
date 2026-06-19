@@ -258,8 +258,10 @@ function HomePage() {
             description="من المواد الدراسية واللغات إلى الكورسات التقنية والإبداعية — كل ما يحتاجه الطالب في مكان واحد."
           />
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {programCategories.map((category) => (
-              <ProgramCard key={category.id} category={category} />
+            {programCategories.map((category, i) => (
+              <Reveal key={category.id} delay={(i % 3) * 0.1} className="h-full">
+                <ProgramCard category={category} />
+              </Reveal>
             ))}
           </div>
           <div className="mt-12 text-center">
