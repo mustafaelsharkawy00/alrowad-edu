@@ -2,8 +2,6 @@
 @source "../src";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 /*
  * Al-Rowad | الرواد — Design System
  * Brand: Premium educational institution
