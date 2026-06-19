@@ -44,7 +44,7 @@ function ProgramsPage() {
             className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg fade-up"
             style={{ "--fade-delay": "0.2s" } as React.CSSProperties}
           >
-            صممنا برامجنا لتلبي احتياجات الطلاب في مختلف المراحل والمجالات، من التأسيس إلى الاحتراف,
+            صممنا برامجنا لتلبي احتياجات الطلاب في مختلف المراحل والمجالات، من التأسيس إلى الاحتراف،
             بأساليب حديثة ومتابعة مستمرة.
           </p>
         </div>
