@@ -11,11 +11,12 @@ import {
   Quote,
   Star,
 } from "lucide-react";
-import logoLight from "@/assets/logowb.png.asset.json";
+import logoLight from "@/assets/logowl.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
 import { IconTile } from "@/components/IconTile";
+import { Reveal } from "@/components/Reveal";
 import {
   GatewayArch,
   KnowledgePath,
@@ -110,10 +111,13 @@ function HomePage() {
               <Star className="h-3.5 w-3.5 fill-gold" />
               مؤسسة تعليمية حديثة
             </span>
-            <h1 className="mt-6 text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl lg:text-6xl animate-rise">
+            <h1 className="mt-6 text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl lg:text-6xl fade-up">
               انطلق نحو مستقبل أفضل مع الرواد
             </h1>
-            <p className="mt-5 text-lg font-semibold text-on-navy sm:text-xl animate-rise-delay">
+            <p
+              className="mt-5 text-lg font-semibold text-on-navy sm:text-xl fade-up"
+              style={{ "--fade-delay": "0.2s" } as React.CSSProperties}
+            >
               تعليم اليوم يصنع مستقبل الغد
             </p>
             <GoldDivider className="mt-6" />
@@ -121,7 +125,10 @@ function HomePage() {
               نوفر برامج تعليمية متكاملة في المواد الدراسية واللغات والمواد الجامعية والكورسات
               التقنية والإبداعية، مع متابعة مستمرة وبيئة تعليمية احترافية.
             </p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div
+              className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row fade-up"
+              style={{ "--fade-delay": "0.4s" } as React.CSSProperties}
+            >
               <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
                 <a href={WHATSAPP_CTA} target="_blank" rel="noopener noreferrer">
                   ابدأ رحلتك
@@ -207,14 +214,13 @@ function HomePage() {
             description="صُممت برامج الرواد لتواكب احتياجات الطلاب باختلاف أنظمتهم التعليمية وأهدافهم الأكاديمية، من المراحل الدراسية الأولى وحتى الدراسة الجامعية والمهارات المهنية، مع خدمات تعليمية تصل إلى المتعلمين داخل مصر وخارجها."
           />
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {audienceItems.map(({ icon, title }) => (
-              <div
-                key={title}
-                className="group card-elevated flex items-center gap-4 p-5"
-              >
-                <IconTile icon={icon} />
-                <span className="text-base font-extrabold text-primary">{title}</span>
-              </div>
+            {audienceItems.map(({ icon, title }, i) => (
+              <Reveal key={title} delay={(i % 3) * 0.1}>
+                <div className="group card-elevated flex items-center gap-4 p-5">
+                  <IconTile icon={icon} />
+                  <span className="text-base font-extrabold text-primary">{title}</span>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -229,15 +235,14 @@ function HomePage() {
             description="نجمع بين الخبرة الأكاديمية والأساليب الحديثة لنمنح كل طالب تجربة تعليمية استثنائية."
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {whyCards.map(({ icon, title, text }) => (
-              <div
-                key={title}
-                className="group card-elevated p-7"
-              >
-                <IconTile icon={icon} size="lg" />
-                <h3 className="mt-5 text-lg font-extrabold text-primary">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
-              </div>
+            {whyCards.map(({ icon, title, text }, i) => (
+              <Reveal key={title} delay={(i % 3) * 0.1} className="h-full">
+                <div className="group card-elevated h-full p-7">
+                  <IconTile icon={icon} size="lg" />
+                  <h3 className="mt-5 text-lg font-extrabold text-primary">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -253,8 +258,10 @@ function HomePage() {
             description="من المواد الدراسية واللغات إلى الكورسات التقنية والإبداعية — كل ما يحتاجه الطالب في مكان واحد."
           />
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {programCategories.map((category) => (
-              <ProgramCard key={category.id} category={category} />
+            {programCategories.map((category, i) => (
+              <Reveal key={category.id} delay={(i % 3) * 0.1} className="h-full">
+                <ProgramCard category={category} />
+              </Reveal>
             ))}
           </div>
           <div className="mt-12 text-center">
@@ -277,30 +284,29 @@ function HomePage() {
             description="كلمات من طلابنا تعكس أثر المتابعة الأكاديمية والأساليب الحديثة في رحلتهم التعليمية."
           />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <figure
-                key={t.name}
-                className="group card-elevated flex h-full flex-col p-7"
-              >
-                <Quote className="h-9 w-9 text-gold" />
-                <blockquote className="mt-4 flex-1 text-base leading-relaxed text-foreground/90">
-                  {t.text}
-                </blockquote>
-                <div className="mt-5 flex items-center gap-1 text-gold">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-gold" />
-                  ))}
-                </div>
-                <figcaption className="mt-4 flex items-center gap-3 border-t border-border pt-4">
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-primary text-sm font-extrabold text-primary-foreground">
-                    {t.name.charAt(0)}
-                  </span>
-                  <span>
-                    <span className="block font-bold text-primary">{t.name}</span>
-                    <span className="block text-sm text-muted-foreground">{t.role}</span>
-                  </span>
-                </figcaption>
-              </figure>
+            {testimonials.map((t, i) => (
+              <Reveal key={t.name} delay={(i % 3) * 0.1} className="h-full">
+                <figure className="group card-elevated flex h-full flex-col p-7">
+                  <Quote className="h-9 w-9 text-gold" />
+                  <blockquote className="mt-4 flex-1 text-base leading-relaxed text-foreground/90">
+                    {t.text}
+                  </blockquote>
+                  <div className="mt-5 flex items-center gap-1 text-gold">
+                    {Array.from({ length: 5 }).map((_, s) => (
+                      <Star key={s} className="h-4 w-4 fill-gold" />
+                    ))}
+                  </div>
+                  <figcaption className="mt-4 flex items-center gap-3 border-t border-border pt-4">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-primary text-sm font-extrabold text-primary-foreground">
+                      {t.name.charAt(0)}
+                    </span>
+                    <span>
+                      <span className="block font-bold text-primary">{t.name}</span>
+                      <span className="block text-sm text-muted-foreground">{t.role}</span>
+                    </span>
+                  </figcaption>
+                </figure>
+              </Reveal>
             ))}
           </div>
         </div>

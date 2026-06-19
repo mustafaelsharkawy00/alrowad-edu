@@ -1,8 +1,11 @@
 import {
   FACEBOOK_LINK,
   INSTAGRAM_LINK,
+  SNAPCHAT_LINK,
+  THREADS_LINK,
   TIKTOK_LINK,
   WHATSAPP_LINK,
+  X_LINK,
 } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
@@ -39,11 +42,38 @@ function TikTokIcon({ className }: { className?: string }) {
   );
 }
 
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25h6.83l4.713 6.231 5.447-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644Z" />
+    </svg>
+  );
+}
+
+function ThreadsIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12.18 22.5h-.05c-3.06-.02-5.4-1.03-6.97-3C3.76 17.74 3 15.4 3 12.51v-.02c0-2.89.76-5.23 2.16-6.99C6.73 3.53 9.07 2.52 12.13 2.5h.05c2.35.02 4.31.62 5.83 1.8a7.04 7.04 0 0 1 2.34 3.41l-1.92.67a4.7 4.7 0 0 0-1.6-2.41c-1.13-.86-2.66-1.31-4.55-1.32-2.46.02-4.27.8-5.4 2.22-1.05 1.33-1.6 3.23-1.6 5.66s.55 4.33 1.6 5.66c1.13 1.42 2.94 2.2 5.4 2.22 2.22-.02 3.69-.55 4.7-1.55.9-.9 1.42-2.13 1.65-3.32-.86-.5-1.94-.82-3.16-.93-.06.86-.32 1.55-.78 2.06-.6.66-1.46.99-2.55.99-1.06 0-1.96-.37-2.55-1.04a2.7 2.7 0 0 1-.66-1.93c.06-1.74 1.62-2.93 3.86-2.93.5 0 .98.03 1.43.09-.05-.74-.27-1.3-.66-1.66-.4-.37-.99-.56-1.74-.57h-.04c-.74 0-1.74.2-2.37 1.17l-1.63-1.1c.85-1.3 2.27-2.02 4-2.02h.06c2.9.02 4.62 1.81 4.79 4.92.1.04.2.09.3.13 1.4.66 2.42 1.66 2.96 2.9.75 1.71.82 4.5-1.45 6.75-1.74 1.72-3.85 2.5-6.83 2.52Zm-.34-9.05c-1.4 0-1.97.69-1.99 1.27-.01.5.46 1.06 1.42 1.06.62 0 1.06-.18 1.36-.51.3-.34.49-.86.55-1.55a6.3 6.3 0 0 0-1.34-.27Z" />
+    </svg>
+  );
+}
+
+function SnapchatIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12.2 2.04c.55.01 2.2.13 3.34 1.4.63.7.9 1.6.97 2.65.04.61.03 1.21 0 1.74 0 .07-.01.18-.02.32.16.09.4.18.7.18.36-.01.75-.13 1.16-.36a.66.66 0 0 1 .3-.08c.16 0 .31.05.43.13.27.18.35.5.21.78-.16.34-.66.6-1.5.94-.1.04-.22.08-.34.12-.42.14-1.06.36-1.23.77-.09.21-.05.48.11.8l.01.02c.06.13 1.43 3.06 4.28 3.53.21.04.36.22.35.43 0 .06-.01.12-.04.18-.2.46-1.04.8-2.57 1.04-.05.07-.1.32-.14.49-.04.16-.08.32-.14.5-.06.2-.21.31-.43.31h-.04c-.14 0-.34-.03-.6-.08a5.3 5.3 0 0 0-1.07-.12c-.24 0-.49.02-.74.06-.49.08-.9.38-1.39.72-.69.49-1.47 1.04-2.66 1.04l-.16-.01h-.12c-1.19 0-1.97-.55-2.66-1.04-.49-.34-.9-.64-1.39-.72a4.7 4.7 0 0 0-.74-.06c-.42 0-.78.07-1.07.13-.24.04-.45.08-.6.08-.27 0-.42-.16-.47-.33a8.4 8.4 0 0 1-.14-.5c-.04-.17-.09-.42-.14-.49-1.53-.24-2.37-.58-2.57-1.05a.55.55 0 0 1-.04-.18.43.43 0 0 1 .35-.43c2.85-.47 4.22-3.4 4.28-3.53l.01-.02c.16-.32.2-.59.11-.8-.17-.41-.81-.63-1.23-.77-.12-.04-.24-.08-.34-.12-1.07-.42-1.46-.88-1.4-1.27.05-.31.4-.52.7-.52.09 0 .17.02.24.05.44.21.83.32 1.18.32.34 0 .57-.1.72-.18l-.02-.32a16.2 16.2 0 0 1 0-1.74c.07-1.05.34-1.95.97-2.65 1.14-1.27 2.79-1.39 3.34-1.4h.27Z" />
+    </svg>
+  );
+}
+
 const socials = [
-  { label: "فيسبوك", href: FACEBOOK_LINK, Icon: FacebookIcon },
+  { label: "واتساب", href: WHATSAPP_LINK, Icon: WhatsAppIcon },
   { label: "إنستغرام", href: INSTAGRAM_LINK, Icon: InstagramIcon },
   { label: "تيك توك", href: TIKTOK_LINK, Icon: TikTokIcon },
-  { label: "واتساب", href: WHATSAPP_LINK, Icon: WhatsAppIcon },
+  { label: "فيسبوك", href: FACEBOOK_LINK, Icon: FacebookIcon },
+  { label: "إكس (تويتر)", href: X_LINK, Icon: XIcon },
+  { label: "ثريدز", href: THREADS_LINK, Icon: ThreadsIcon },
+  { label: "سناب شات", href: SNAPCHAT_LINK, Icon: SnapchatIcon },
 ];
 
 export function SocialLinks({
@@ -54,7 +84,7 @@ export function SocialLinks({
   variant?: "light" | "dark";
 }) {
   return (
-    <div className={cn("flex items-center gap-2.5", className)}>
+    <div className={cn("flex flex-wrap items-center gap-2.5", className)}>
       {socials.map(({ label, href, Icon }) => (
         <a
           key={label}

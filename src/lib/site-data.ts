@@ -117,6 +117,9 @@ export const WHATSAPP_CHANNEL = "https://whatsapp.com/channel/0029Vb7PPM7Dp2Q5JY
 export const FACEBOOK_LINK = "https://www.facebook.com/profile.php?id=61590912205880";
 export const INSTAGRAM_LINK = "https://www.instagram.com/alrowad_edu";
 export const TIKTOK_LINK = "https://www.tiktok.com/@alrowad.edu";
+export const X_LINK = "https://x.com/AlRowadedu";
+export const THREADS_LINK = "https://www.threads.com/@alrowad_edu";
+export const SNAPCHAT_LINK = "https://www.snapchat.com/add/alrowad.edu";
 export const DOMAIN = "alrowad.edu";
 
 /** Pre-filled WhatsApp conversation — the primary conversion channel. */

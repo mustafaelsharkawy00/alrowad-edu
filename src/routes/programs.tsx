@@ -3,6 +3,7 @@ import { ArrowLeft, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
+import { Reveal } from "@/components/Reveal";
 import { GatewayArch } from "@/components/BrandMotifs";
 import { programCategories, WHATSAPP_CTA } from "@/lib/site-data";
 
@@ -36,10 +37,13 @@ function ProgramsPage() {
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
             البرامج التعليمية
           </span>
-          <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl">
+          <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl fade-up">
             مسارات تعليمية متكاملة لكل طموح
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
+          <p
+            className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg fade-up"
+            style={{ "--fade-delay": "0.2s" } as React.CSSProperties}
+          >
             صممنا برامجنا لتلبي احتياجات الطلاب في مختلف المراحل والمجالات، من التأسيس إلى الاحتراف،
             بأساليب حديثة ومتابعة مستمرة.
           </p>
@@ -49,8 +53,10 @@ function ProgramsPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {programCategories.map((category) => (
-              <ProgramCard key={category.id} category={category} />
+            {programCategories.map((category, i) => (
+              <Reveal key={category.id} delay={(i % 3) * 0.1} className="h-full">
+                <ProgramCard category={category} />
+              </Reveal>
             ))}
           </div>
         </div>
