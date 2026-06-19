@@ -3,6 +3,7 @@ import { MessageCircle, MapPin, Send, Mail, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { GatewayArch, GoldDivider } from "@/components/BrandMotifs";
+import { Reveal } from "@/components/Reveal";
 import { SocialLinks } from "@/components/SocialLinks";
 import {
   DOMAIN,
