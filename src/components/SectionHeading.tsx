@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 export function SectionHeading({
   eyebrow,
@@ -16,7 +17,7 @@ export function SectionHeading({
   className?: string;
 }) {
   return (
-    <div
+    <Reveal
       className={cn(
         "max-w-2xl",
         align === "center" ? "mx-auto text-center" : "text-right",
