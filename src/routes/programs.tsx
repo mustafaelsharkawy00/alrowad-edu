@@ -37,11 +37,14 @@ function ProgramsPage() {
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
             البرامج التعليمية
           </span>
-          <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl">
+          <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-tight text-balance text-primary-foreground sm:text-5xl fade-up">
             مسارات تعليمية متكاملة لكل طموح
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
-            صممنا برامجنا لتلبي احتياجات الطلاب في مختلف المراحل والمجالات، من التأسيس إلى الاحتراف،
+          <p
+            className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg fade-up"
+            style={{ "--fade-delay": "0.2s" } as React.CSSProperties}
+          >
+            صممنا برامجنا لتلبي احتياجات الطلاب في مختلف المراحل والمجالات، من التأسيس إلى الاحتراف,
             بأساليب حديثة ومتابعة مستمرة.
           </p>
         </div>
