@@ -120,7 +120,7 @@ function ContactPage() {
                 </div>
                 <div>
                   <div className="font-extrabold text-primary">نطاق الخدمة</div>
-                  <div className="text-sm text-muted-foreground">مصر · الوطن العربي والخليج</div>
+                  <div className="text-sm text-muted-foreground">تعليم حضوري وعن بُعد</div>
                 </div>
               </div>
             </Reveal>
