@@ -138,6 +138,17 @@ function ContactPage() {
             </Reveal>
           </div>
 
+          {/* Premium social platform cards */}
+          <div className="mt-16">
+            <SectionHeading
+              eyebrow="تابعنا"
+              title="تواصل معنا عبر منصات التواصل"
+              description="تابع أكاديمية الرواد على جميع المنصات لمتابعة أحدث البرامج والمحتوى التعليمي."
+            />
+            <SocialCards className="mt-12" />
+          </div>
+
+
           {/* Final WhatsApp CTA */}
           <div className="relative mt-12 overflow-hidden rounded-[2rem] gradient-navy px-6 py-12 text-center shadow-elegant sm:px-10">
             <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-30" />
