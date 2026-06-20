@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { GatewayArch, GoldDivider } from "@/components/BrandMotifs";
 import { Reveal } from "@/components/Reveal";
-import { SocialLinks } from "@/components/SocialLinks";
+import { SocialLinks, SocialCards } from "@/components/SocialLinks";
 import {
   DOMAIN,
   WHATSAPP_CHANNEL,
@@ -39,7 +39,7 @@ function ContactPage() {
         <div className="pointer-events-none absolute inset-0 hero-mesh opacity-80" />
         <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-40" />
         <GatewayArch className="pointer-events-none absolute left-1/2 top-0 h-[150%] w-auto -translate-x-1/2 text-primary-foreground/[0.07]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
+        <div className="relative mx-auto max-w-[1400px] px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
             تواصل معنا
           </span>
@@ -120,7 +120,7 @@ function ContactPage() {
                 </div>
                 <div>
                   <div className="font-extrabold text-primary">نطاق الخدمة</div>
-                  <div className="text-sm text-muted-foreground">مصر · الوطن العربي والخليج</div>
+                  <div className="text-sm text-muted-foreground">تعليم حضوري وعن بُعد</div>
                 </div>
               </div>
             </Reveal>
@@ -137,6 +137,17 @@ function ContactPage() {
               </div>
             </Reveal>
           </div>
+
+          {/* Premium social platform cards */}
+          <div className="mt-16">
+            <SectionHeading
+              eyebrow="تابعنا"
+              title="تواصل معنا عبر منصات التواصل"
+              description="تابع أكاديمية الرواد على جميع المنصات لمتابعة أحدث البرامج والمحتوى التعليمي."
+            />
+            <SocialCards className="mt-12" />
+          </div>
+
 
           {/* Final WhatsApp CTA */}
           <div className="relative mt-12 overflow-hidden rounded-[2rem] gradient-navy px-6 py-12 text-center shadow-elegant sm:px-10">

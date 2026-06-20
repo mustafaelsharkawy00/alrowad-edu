@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, MapPin, Send, Mail } from "lucide-react";
+import { MessageCircle, Send, Mail } from "lucide-react";
 import logoLight from "@/assets/logowl.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -26,7 +26,7 @@ export function Footer() {
 
       {/* Community join band */}
       <div className="relative border-b border-primary-foreground/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-12 text-center sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:text-right">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-6 px-4 py-12 text-center sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:text-right">
           <div className="max-w-xl">
             <h2 className="text-2xl font-extrabold sm:text-3xl">انضم إلى مجتمع الرواد</h2>
             <p className="mt-2 text-primary-foreground/70">
@@ -42,7 +42,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.6fr_1fr_1.2fr] lg:px-8">
+      <div className="relative mx-auto grid max-w-[1400px] gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.6fr_1fr_1.2fr] lg:px-8">
         {/* Brand */}
         <div>
           <img
@@ -110,19 +110,13 @@ export function Footer() {
               </span>
               <span dir="ltr">info@{DOMAIN}</span>
             </li>
-            <li className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-gold">
-                <MapPin className="h-4 w-4" />
-              </span>
-              مصر · الوطن العربي والخليج
-            </li>
           </ul>
         </div>
       </div>
 
       <div className="relative">
-        <GoldDivider className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" />
-        <div className="mx-auto mt-2 flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-sm text-primary-foreground/60 sm:flex-row sm:px-6 lg:px-8">
+        <GoldDivider className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8" />
+        <div className="mx-auto mt-2 flex max-w-[1400px] flex-col items-center justify-between gap-2 px-4 py-6 text-sm text-primary-foreground/60 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} الرواد · {DOMAIN} · جميع الحقوق محفوظة.</p>
           <p className="font-semibold text-gold/90">نصنع روّاد المستقبل</p>
         </div>

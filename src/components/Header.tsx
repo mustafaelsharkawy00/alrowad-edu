@@ -18,7 +18,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full">
       <div className="gradient-header border-b border-gold shadow-[0_4px_24px_-16px_rgba(3,27,78,0.8)]">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:h-20 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-4 sm:h-20 sm:px-6 lg:px-8">
           <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
             <img
               src={logo.url}
@@ -67,7 +67,7 @@ export function Header() {
 
         {open && (
           <div className="border-t border-gold/40 gradient-header md:hidden">
-            <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
+            <nav className="mx-auto flex max-w-[1400px] flex-col gap-1 px-4 py-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}

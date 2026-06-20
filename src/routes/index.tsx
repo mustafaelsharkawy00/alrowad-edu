@@ -98,7 +98,7 @@ function HomePage() {
         <NodeConstellation className="pointer-events-none absolute right-10 top-14 hidden h-20 w-auto text-accent/20 lg:block" />
         <NodeConstellation className="pointer-events-none absolute bottom-16 left-10 hidden h-20 w-auto scale-x-[-1] text-gold/15 lg:block" />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+        <div className="relative mx-auto max-w-[1400px] px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
             <img
               src={logoLight.url}
@@ -161,12 +161,12 @@ function HomePage() {
 
       {/* ABOUT */}
       <section className="bg-secondary py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <SectionHeading
                 eyebrow="من نحن"
-                title="مؤسسة تعليمية حديثة تصنع الفارق"
+                title="شريكك في بناء التفوق الأكاديمي وتطوير المهارات المستقبلية"
                 align="start"
               />
               <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
@@ -207,7 +207,7 @@ function HomePage() {
       {/* AUDIENCE — educational systems & tracks we serve */}
       <section className="relative overflow-hidden bg-background py-20 sm:py-28">
         <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-50" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="من نخدم"
             title="نخدم مختلف الأنظمة التعليمية والمسارات الأكاديمية"
@@ -228,7 +228,7 @@ function HomePage() {
 
       {/* WHY */}
       <section className="bg-secondary py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="لماذا الرواد؟"
             title="مميزات تجعلنا الخيار الأمثل"
@@ -251,7 +251,7 @@ function HomePage() {
       {/* PROGRAMS OVERVIEW */}
       <section className="relative overflow-hidden bg-background py-20 sm:py-28">
         <div className="pointer-events-none absolute inset-0 dot-grid-navy opacity-40" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="برامجنا"
             title="برامج تعليمية تغطي كل مسار"
@@ -277,7 +277,7 @@ function HomePage() {
 
       {/* TESTIMONIALS */}
       <section className="bg-secondary py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="آراء الطلاب"
             title="قصص نجاح من طلابنا"
@@ -314,7 +314,7 @@ function HomePage() {
 
       {/* CTA */}
       <section className="bg-background py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2.5rem] gradient-navy px-6 py-16 text-center shadow-elegant sm:px-12 sm:py-20">
             <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-30" />
             <div className="absolute inset-0 hero-mesh opacity-80" />
