@@ -110,12 +110,9 @@ export function Footer() {
               </span>
               <span dir="ltr">info@{DOMAIN}</span>
             </li>
-            <li className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary-foreground/10 text-gold">
-                <MapPin className="h-4 w-4" />
-              </span>
-              مصر · الوطن العربي والخليج
-            </li>
+          </ul>
+        </div>
+      </div>
           </ul>
         </div>
       </div>
