@@ -67,13 +67,13 @@ function SnapchatIcon({ className }: { className?: string }) {
 }
 
 const socials = [
-  { label: "واتساب", href: WHATSAPP_LINK, Icon: WhatsAppIcon },
-  { label: "إنستغرام", href: INSTAGRAM_LINK, Icon: InstagramIcon },
-  { label: "تيك توك", href: TIKTOK_LINK, Icon: TikTokIcon },
-  { label: "فيسبوك", href: FACEBOOK_LINK, Icon: FacebookIcon },
-  { label: "إكس (تويتر)", href: X_LINK, Icon: XIcon },
-  { label: "ثريدز", href: THREADS_LINK, Icon: ThreadsIcon },
-  { label: "سناب شات", href: SNAPCHAT_LINK, Icon: SnapchatIcon },
+  { label: "واتساب", handle: "تواصل مباشر", href: WHATSAPP_LINK, Icon: WhatsAppIcon },
+  { label: "إنستغرام", handle: "@alrowad_edu", href: INSTAGRAM_LINK, Icon: InstagramIcon },
+  { label: "تيك توك", handle: "@alrowad.edu", href: TIKTOK_LINK, Icon: TikTokIcon },
+  { label: "فيسبوك", handle: "Al-Rowad", href: FACEBOOK_LINK, Icon: FacebookIcon },
+  { label: "إكس", handle: "@AlRowadedu", href: X_LINK, Icon: XIcon },
+  { label: "ثريدز", handle: "@alrowad_edu", href: THREADS_LINK, Icon: ThreadsIcon },
+  { label: "سناب شات", handle: "alrowad.edu", href: SNAPCHAT_LINK, Icon: SnapchatIcon },
 ];
 
 export function SocialLinks({
@@ -101,6 +101,45 @@ export function SocialLinks({
           )}
         >
           <Icon className="h-[1.15rem] w-[1.15rem] transition-transform duration-300 group-hover:scale-110" />
+        </a>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * Premium social cards — each card reacts as a whole on hover:
+ * border, icon background, and icon color shift together with the gold accent.
+ */
+export function SocialCards({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        "grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4",
+        className,
+      )}
+    >
+      {socials.map(({ label, handle, href, Icon }) => (
+        <a
+          key={label}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={label}
+          title={label}
+          className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-[0_8px_25px_rgba(3,27,78,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-[0_16px_40px_rgba(3,27,78,0.14)]"
+        >
+          <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-border bg-icon-surface text-primary transition-all duration-300 group-hover:border-gold group-hover:bg-primary group-hover:text-primary-foreground">
+            <Icon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+          </span>
+          <span className="min-w-0">
+            <span className="block truncate font-extrabold text-primary transition-colors group-hover:text-primary">
+              {label}
+            </span>
+            <span className="block truncate text-xs text-muted-foreground transition-colors group-hover:text-gold" dir="ltr">
+              {handle}
+            </span>
+          </span>
         </a>
       ))}
     </div>
