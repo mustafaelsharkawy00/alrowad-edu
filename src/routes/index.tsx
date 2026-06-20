@@ -166,7 +166,7 @@ function HomePage() {
             <div>
               <SectionHeading
                 eyebrow="من نحن"
-                title="مؤسسة تعليمية حديثة تصنع الفارق"
+                title="شريكك في بناء التفوق الأكاديمي وتطوير المهارات المستقبلية"
                 align="start"
               />
               <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
