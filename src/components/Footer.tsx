@@ -113,9 +113,6 @@ export function Footer() {
           </ul>
         </div>
       </div>
-          </ul>
-        </div>
-      </div>
 
       <div className="relative">
         <GoldDivider className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8" />
