@@ -33,7 +33,7 @@ function ProgramsPage() {
         <div className="pointer-events-none absolute inset-0 hero-mesh opacity-80" />
         <div className="pointer-events-none absolute inset-0 dot-grid-light opacity-40" />
         <GatewayArch className="pointer-events-none absolute left-1/2 top-0 h-[150%] w-auto -translate-x-1/2 text-primary-foreground/[0.07]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
+        <div className="relative mx-auto max-w-[1400px] px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold">
             البرامج التعليمية
           </span>
@@ -51,7 +51,7 @@ function ProgramsPage() {
       </section>
 
       <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {programCategories.map((category, i) => (
               <Reveal key={category.id} delay={(i % 3) * 0.1} className="h-full">
@@ -63,7 +63,7 @@ function ProgramsPage() {
       </section>
 
       <section className="pb-20 sm:pb-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2.5rem] gradient-navy px-6 py-14 text-center sm:px-12 sm:py-16">
             <div className="absolute inset-0 ring-spot" />
             <div className="relative mx-auto max-w-2xl">
