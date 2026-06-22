@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle, Send, Mail } from "lucide-react";
-import logoLight from "@/assets/logowl.png.asset.json";
+import logoLight from "@/assets/logowl-new.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/SocialLinks";
 import { GatewayArch, GoldDivider } from "@/components/BrandMotifs";
