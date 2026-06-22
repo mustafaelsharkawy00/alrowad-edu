@@ -11,7 +11,7 @@ import {
   Quote,
   Star,
 } from "lucide-react";
-import logoLight from "@/assets/logowl.png.asset.json";
+import logoLight from "@/assets/logowl-new.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
