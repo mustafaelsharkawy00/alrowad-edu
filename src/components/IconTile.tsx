@@ -27,13 +27,13 @@ export function IconTile({
   return (
     <span
       className={cn(
-        "relative grid shrink-0 place-items-center overflow-hidden bg-icon-surface text-primary-2 ring-1 ring-inset ring-gold/70 shadow-[0_6px_18px_-10px_rgba(3,27,78,0.35)] transition-all duration-300 group-hover:ring-gold group-hover:-translate-y-0.5",
+        "relative grid shrink-0 place-items-center overflow-hidden bg-icon-surface text-primary-2 ring-1 ring-inset ring-gold/40 shadow-[0_6px_18px_-10px_rgba(3,27,78,0.35)] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-gold group-hover:text-primary-foreground group-hover:ring-gold group-hover:shadow-[0_10px_24px_-10px_rgba(212,175,55,0.55)]",
         s.box,
         className,
       )}
       aria-hidden="true"
     >
-      <Icon className={cn("relative text-primary-2", s.icon)} strokeWidth={1.75} />
+      <Icon className={cn("relative transition-colors duration-300", s.icon)} strokeWidth={1.75} />
     </span>
   );
 }
