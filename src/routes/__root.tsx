@@ -99,6 +99,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "الرواد | نصنع روّاد المستقبل" },
       { name: "twitter:image", content: logo.url },
+      { name: "description", content: "Al-Rowad Nexus is a premium, responsive educational website for Al-Rowad, an institution offering diverse academic and technical programs." },
+      { property: "og:description", content: "Al-Rowad Nexus is a premium, responsive educational website for Al-Rowad, an institution offering diverse academic and technical programs." },
+      { name: "twitter:description", content: "Al-Rowad Nexus is a premium, responsive educational website for Al-Rowad, an institution offering diverse academic and technical programs." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c10d57fa-635c-415e-8486-a1f32525a6cf/id-preview-25772883--e739fff6-3bf6-4117-bf7a-c203bc3fc369.lovable.app-1782141160097.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c10d57fa-635c-415e-8486-a1f32525a6cf/id-preview-25772883--e739fff6-3bf6-4117-bf7a-c203bc3fc369.lovable.app-1782141160097.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
