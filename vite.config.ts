@@ -6,9 +6,11 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+const isGithubPagesBuild = process.env.NITRO_PRESET === "github-pages";
+
 export default defineConfig({
   vite: {
-    base: '/alrowad-edu/',
+    base: isGithubPagesBuild ? "/alrowad-edu/" : "/",
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
