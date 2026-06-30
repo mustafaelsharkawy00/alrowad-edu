@@ -9,7 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
-import appCss from "../styles.css?url";
+import "../styles.css";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -106,7 +106,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c10d57fa-635c-415e-8486-a1f32525a6cf/id-preview-25772883--e739fff6-3bf6-4117-bf7a-c203bc3fc369.lovable.app-1782141160097.png" },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: logo.url },
       { rel: "apple-touch-icon", href: logo.url },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
