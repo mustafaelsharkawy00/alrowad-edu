@@ -45,13 +45,15 @@ export function Footer() {
       <div className="relative mx-auto grid max-w-[1400px] gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.6fr_1fr_1.2fr] lg:px-8">
         {/* Brand */}
         <div>
-          <img
-            src={logoLight.url}
-            alt="شعار الرواد"
-            className="h-24 w-auto"
-            width={200}
-            height={200}
-          />
+          <span className="inline-grid place-items-center rounded-2xl bg-white px-4 py-3 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.6)] ring-1 ring-gold/40">
+            <img
+              src={logoLight.url}
+              alt="شعار الرواد"
+              className="h-20 w-auto object-contain"
+              width={180}
+              height={97}
+            />
+          </span>
           <p className="mt-5 max-w-sm leading-relaxed text-primary-foreground/70">
             مؤسسة تعليمية حديثة تخدم مختلف الأنظمة التعليمية والمسارات الأكاديمية، من المراحل
             الدراسية الأولى وحتى الدراسة الجامعية والمهارات المهنية — داخل مصر والوطن العربي والخليج.
