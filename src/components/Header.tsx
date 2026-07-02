@@ -19,16 +19,14 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full">
       <div className="gradient-header border-b border-gold shadow-[0_4px_24px_-16px_rgba(3,27,78,0.8)]">
         <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-4 sm:h-20 sm:px-6 lg:px-8">
-          <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-            <span className="grid place-items-center rounded-2xl bg-white px-3 py-1.5 shadow-[0_6px_20px_-8px_rgba(0,0,0,0.45)] ring-1 ring-gold/40">
-              <img
-                src={logo.url}
-                alt="شعار الرواد"
-                className="h-[46px] w-auto object-contain sm:h-[52px]"
-                width={120}
-                height={65}
-              />
-            </span>
+          <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+            <img
+              src={logo.url}
+              alt="شعار الرواد"
+              className="h-[50px] w-auto object-contain sm:h-[66px]"
+              width={122}
+              height={66}
+            />
             <span className="sr-only">الرواد</span>
           </Link>
 
