@@ -94,10 +94,10 @@ export function SocialLinks({
           aria-label={label}
           title={label}
           className={cn(
-            "group grid h-10 w-10 place-items-center rounded-xl ring-1 ring-inset transition-all duration-300 hover:-translate-y-1 hover:scale-105",
+            "group grid h-9 w-9 place-items-center rounded-full ring-1 ring-inset transition-all duration-300 hover:-translate-y-0.5",
             variant === "light"
-              ? "bg-secondary text-primary ring-border hover:bg-primary hover:text-primary-foreground hover:ring-gold/60"
-              : "bg-primary-foreground/10 text-primary-foreground ring-primary-foreground/15 hover:bg-gold hover:text-gold-foreground hover:ring-gold",
+              ? "bg-secondary text-primary ring-border hover:bg-gold hover:text-primary hover:ring-gold"
+              : "bg-transparent text-primary-foreground ring-gold/60 hover:bg-gold hover:text-primary hover:ring-gold",
           )}
         >
           <Icon className="h-[1.15rem] w-[1.15rem] transition-transform duration-300 group-hover:scale-110" />
