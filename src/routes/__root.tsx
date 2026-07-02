@@ -14,7 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Toaster } from "../components/ui/sonner";
-import logo from "../assets/logowl-new.png.asset.json";
+import logo from "../assets/logo-alrowad.png.asset.json";
 
 function NotFoundComponent() {
   return (

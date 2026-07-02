@@ -11,7 +11,7 @@ import {
   Quote,
   Star,
 } from "lucide-react";
-import logoLight from "@/assets/logowl-new.png.asset.json";
+import logoLight from "@/assets/logo-alrowad.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProgramCard } from "@/components/ProgramCard";
@@ -69,19 +69,19 @@ const stats = [
 
 const testimonials = [
   {
-    name: "أحمد محمد",
-    role: "الصف الثالث الثانوي",
-    text: "المتابعة كانت منتظمة طوال السنة، والمدرسين بيشرحوا بأسلوب مبسّط. مستواي في المواد العلمية اتحسّن بشكل واضح قبل الثانوية العامة.",
+    name: "أحمد خالد",
+    role: "طالب ثانوية عامة",
+    text: "المتابعة كانت ممتازة، وقدرت أحسن مستوايا بشكل واضح.",
   },
   {
-    name: "مريم خالد",
-    role: "الصف الثاني الإعدادي",
-    text: "بقيت أفهم الدروس أول بأول، والواجبات بتتراجع باستمرار. حسّيت إن فيه اهتمام حقيقي بمستواي وتقدّمي.",
+    name: "سارة محمد",
+    role: "كلية علوم",
+    text: "الكورسات الجامعية ساعدتني أفهم المواد بطريقة أسهل بكثير.",
   },
   {
-    name: "يوسف علي",
-    role: "كلية الحاسبات",
-    text: "ساعدوني في مواد الجامعة الصعبة زي البرمجة والرياضيات، والشرح كان عملي وبيوصّل الفكرة بسرعة.",
+    name: "محمد عبدالله",
+    role: "ولي أمر",
+    text: "من أكثر الأمور التي أعجبتني المتابعة المستمرة.",
   },
 ];
 
@@ -100,13 +100,15 @@ function HomePage() {
 
         <div className="relative mx-auto max-w-[1400px] px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <img
-              src={logoLight.url}
-              alt="شعار الرواد"
-              width={240}
-              height={240}
-              className="mx-auto h-28 w-auto animate-fade drop-shadow-[0_22px_55px_color-mix(in_oklab,var(--accent)_40%,transparent)] sm:h-40"
-            />
+            <span className="mx-auto inline-grid place-items-center rounded-3xl bg-white px-6 py-5 shadow-[0_22px_55px_-20px_rgba(0,0,0,0.55)] ring-1 ring-gold/40 animate-fade">
+              <img
+                src={logoLight.url}
+                alt="شعار الرواد"
+                width={360}
+                height={195}
+                className="h-24 w-auto object-contain sm:h-32"
+              />
+            </span>
             <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold backdrop-blur-sm">
               <Star className="h-3.5 w-3.5 fill-gold" />
               مؤسسة تعليمية حديثة
@@ -301,8 +303,8 @@ function HomePage() {
                       {t.name.charAt(0)}
                     </span>
                     <span>
-                      <span className="block font-bold text-primary">{t.name}</span>
-                      <span className="block text-sm text-muted-foreground">{t.role}</span>
+                      <span className="block text-base font-extrabold text-primary">{t.name}</span>
+                      <span className="block text-xs font-medium text-accent">{t.role}</span>
                     </span>
                   </figcaption>
                 </figure>

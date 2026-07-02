@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, MessageCircle } from "lucide-react";
-import logo from "@/assets/logowl-new.png.asset.json";
+import logo from "@/assets/logo-alrowad.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/SocialLinks";
 import { WHATSAPP_CTA } from "@/lib/site-data";
@@ -20,13 +20,15 @@ export function Header() {
       <div className="gradient-header border-b border-gold shadow-[0_4px_24px_-16px_rgba(3,27,78,0.8)]">
         <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-4 sm:h-20 sm:px-6 lg:px-8">
           <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-            <img
-              src={logo.url}
-              alt="شعار الرواد"
-              className="h-[60px] w-auto object-contain"
-              width={60}
-              height={60}
-            />
+            <span className="grid place-items-center rounded-2xl bg-white px-3 py-1.5 shadow-[0_6px_20px_-8px_rgba(0,0,0,0.45)] ring-1 ring-gold/40">
+              <img
+                src={logo.url}
+                alt="شعار الرواد"
+                className="h-[46px] w-auto object-contain sm:h-[52px]"
+                width={120}
+                height={65}
+              />
+            </span>
             <span className="sr-only">الرواد</span>
           </Link>
 
