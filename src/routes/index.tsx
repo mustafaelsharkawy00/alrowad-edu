@@ -100,13 +100,15 @@ function HomePage() {
 
         <div className="relative mx-auto max-w-[1400px] px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <img
-              src={logoLight.url}
-              alt="شعار الرواد"
-              width={240}
-              height={240}
-              className="mx-auto h-28 w-auto animate-fade drop-shadow-[0_22px_55px_color-mix(in_oklab,var(--accent)_40%,transparent)] sm:h-40"
-            />
+            <span className="mx-auto inline-grid place-items-center rounded-3xl bg-white px-6 py-5 shadow-[0_22px_55px_-20px_rgba(0,0,0,0.55)] ring-1 ring-gold/40 animate-fade">
+              <img
+                src={logoLight.url}
+                alt="شعار الرواد"
+                width={360}
+                height={195}
+                className="h-24 w-auto object-contain sm:h-32"
+              />
+            </span>
             <span className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-primary-foreground/5 px-4 py-1.5 text-xs font-bold text-gold backdrop-blur-sm">
               <Star className="h-3.5 w-3.5 fill-gold" />
               مؤسسة تعليمية حديثة
