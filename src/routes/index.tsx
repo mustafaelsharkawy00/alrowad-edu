@@ -301,8 +301,8 @@ function HomePage() {
                       {t.name.charAt(0)}
                     </span>
                     <span>
-                      <span className="block font-bold text-primary">{t.name}</span>
-                      <span className="block text-sm text-muted-foreground">{t.role}</span>
+                      <span className="block text-base font-extrabold text-primary">{t.name}</span>
+                      <span className="block text-xs font-medium text-accent">{t.role}</span>
                     </span>
                   </figcaption>
                 </figure>
